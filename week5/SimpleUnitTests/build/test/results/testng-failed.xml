@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SimpleUnitTests]">
+  <test name="TestNG tests(failed)">
+    <classes>
+      <class name="ch.unil.doplab.CaesarNGTest">
+        <methods>
+          <include name="setUpMethod"/>
+          <include name="tearDownClass"/>
+          <include name="testDecodingWith_7"/>
+          <include name="testDecodingWith_26"/>
+          <include name="tearDownMethod"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- ch.unil.doplab.CaesarNGTest -->
+    </classes>
+  </test> <!-- TestNG tests(failed) -->
+</suite> <!-- Failed suite [SimpleUnitTests] -->

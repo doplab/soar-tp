@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SimpleUnitTests" duration-ms="21" started-at="2019-10-11T07:05:37Z" finished-at="2019-10-11T07:05:37Z">
+    <groups>
+    </groups>
+    <test name="TestNG tests" duration-ms="21" started-at="2019-10-11T07:05:37Z" finished-at="2019-10-11T07:05:37Z">
+      <class name="ch.unil.doplab.CaesarNGTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="setUpClass" is-config="true" duration-ms="10" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="testDecodingWith_26()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="testDecodingWith_26" duration-ms="2" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDecodingWith_26 -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="setUpMethod" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="testDecodingWith_7()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="testDecodingWith_7" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDecodingWith_7 -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="setUpMethod" is-config="true" duration-ms="1" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="setUpMethod" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="testEncodingWitch_26()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="testEncodingWitch_26" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEncodingWitch_26 -->
+        <test-method status="PASS" signature="setUpMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="setUpMethod" is-config="true" duration-ms="1" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpMethod -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDownMethod()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="tearDownMethod" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="testEncodingWith_7()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="testEncodingWith_7" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEncodingWith_7 -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:ch.unil.doplab.CaesarNGTest@424c0bc4]" name="tearDownClass" is-config="true" duration-ms="0" started-at="2019-10-11T09:05:37Z" finished-at="2019-10-11T09:05:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- ch.unil.doplab.CaesarNGTest -->
+    </test> <!-- TestNG tests -->
+  </suite> <!-- SimpleUnitTests -->
+</testng-results>

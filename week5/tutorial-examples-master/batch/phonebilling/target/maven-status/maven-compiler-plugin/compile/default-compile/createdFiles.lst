@@ -1,0 +1,14 @@
+javaeetutorial/batch/phonebilling/BillReader.class
+javaeetutorial/batch/phonebilling/BillProcessor.class
+javaeetutorial/batch/phonebilling/beans/JsfBean.class
+javaeetutorial/batch/phonebilling/ItemNumberCheckpoint.class
+javaeetutorial/batch/phonebilling/items/PhoneBill.class
+javaeetutorial/batch/phonebilling/CallRecordProcessor.class
+javaeetutorial/batch/phonebilling/CallRecordReader.class
+javaeetutorial/batch/phonebilling/items/CallRecord$1.class
+javaeetutorial/batch/phonebilling/BillPartitionMapper.class
+javaeetutorial/batch/phonebilling/CallRecordWriter.class
+javaeetutorial/batch/phonebilling/BillPartitionMapper$1.class
+javaeetutorial/batch/phonebilling/items/CallRecord.class
+javaeetutorial/batch/phonebilling/tools/CallRecordLogCreator.class
+javaeetutorial/batch/phonebilling/BillWriter.class

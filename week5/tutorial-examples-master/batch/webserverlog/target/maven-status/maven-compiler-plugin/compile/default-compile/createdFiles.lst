@@ -1,0 +1,11 @@
+javaeetutorial/batch/webserverlog/LogLineReader.class
+javaeetutorial/batch/webserverlog/MobileBatchlet.class
+javaeetutorial/batch/webserverlog/items/LogFilteredLine.class
+javaeetutorial/batch/webserverlog/LogFilteredLineWriter.class
+javaeetutorial/batch/webserverlog/InfoJobListener.class
+javaeetutorial/batch/webserverlog/InfoItemProcessListener.class
+javaeetutorial/batch/webserverlog/tools/WebServerLogCreator.class
+javaeetutorial/batch/webserverlog/beans/JsfBean.class
+javaeetutorial/batch/webserverlog/ItemNumberCheckpoint.class
+javaeetutorial/batch/webserverlog/LogLineProcessor.class
+javaeetutorial/batch/webserverlog/items/LogLine.class
