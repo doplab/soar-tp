@@ -7,8 +7,8 @@
         <methods>
           <include name="setUpMethod"/>
           <include name="tearDownClass"/>
-          <include name="testDecodingWith_7"/>
-          <include name="testDecodingWith_26"/>
+          <include name="testEncodingWith_7"/>
+          <include name="testEncodingWitch_26"/>
           <include name="tearDownMethod"/>
           <include name="setUpClass"/>
         </methods>

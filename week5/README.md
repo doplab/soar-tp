@@ -77,11 +77,21 @@ https://github.com/doplab/soar-tp.git
 
 ## Modularity and Unit Testing
 
+#### Requirements
+1. Netbeans IDE
+2. Payara Server
+
 #### Opening the project on NetBeans IDE
 1. **File** > **Open Project** >>>
 2. Navigate to `week5>SimpleUnitTests`
 
 ## Remote invocation and transactions
+
+#### Requirements
+1. Netbeans IDE
+2. Payara Server
+
 #### Opening the project on NetBeans IDE
 1. **File** > **Open Project** >>>
 2. Navigate to `week5>tutorial-examples-master`
+

@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SimpleUnitTests">
-              <span class="suite-name border-passed">SimpleUnitTests</span>
+              <span class="suite-name border-failed">SimpleUnitTests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SimpleUnitTests" class="hide-methods failed suite-SimpleUnitTests"> (hide)</a> <!-- hide-methods failed suite-SimpleUnitTests -->
+                      <a href="#" panel-name="suite-SimpleUnitTests" class="show-methods failed suite-SimpleUnitTests"> (show)</a> <!-- show-methods failed suite-SimpleUnitTests -->
+                    </span>
+                    <div class="method-list-content failed suite-SimpleUnitTests">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SimpleUnitTests" title="ch.unil.doplab.CaesarNGTest" hash-for-method="testEncodingWitch_26">testEncodingWitch_26</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SimpleUnitTests" title="ch.unil.doplab.CaesarNGTest" hash-for-method="testEncodingWith_7">testEncodingWith_7</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-SimpleUnitTests -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,16 +128,6 @@
                         <a href="#" class="method navigator-link" panel-name="suite-SimpleUnitTests" title="ch.unil.doplab.CaesarNGTest" hash-for-method="testDecodingWith_7">testDecodingWith_7</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SimpleUnitTests" title="ch.unil.doplab.CaesarNGTest" hash-for-method="testEncodingWitch_26">testEncodingWitch_26</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SimpleUnitTests" title="ch.unil.doplab.CaesarNGTest" hash-for-method="testEncodingWith_7">testEncodingWith_7</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-SimpleUnitTests -->
                   </li>
                 </ul>
@@ -131,6 +140,36 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SimpleUnitTests" class="panel SimpleUnitTests">
+          <div class="suite-SimpleUnitTests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">ch.unil.doplab.CaesarNGTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEncodingWitch_26">
+                  </a> <!-- testEncodingWitch_26 -->
+                  <span class="method-name">testEncodingWitch_26</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Cowards die many times before their deaths] but found [not implemented yet]
+	at ch.unil.doplab.CaesarNGTest.testEncodingWitch_26(CaesarNGTest.java:78)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEncodingWith_7">
+                  </a> <!-- testEncodingWith_7 -->
+                  <span class="method-name">testEncodingWith_7</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Jvdhykz kpl thuf aptlz ilmvyl aolpy klhaoz] but found [not implemented yet]
+	at ch.unil.doplab.CaesarNGTest.testEncodingWith_7(CaesarNGTest.java:51)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SimpleUnitTests-class-failed -->
           <div class="suite-SimpleUnitTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -149,20 +188,6 @@
                   <a name="testDecodingWith_7">
                   </a> <!-- testDecodingWith_7 -->
                   <span class="method-name">testDecodingWith_7</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEncodingWitch_26">
-                  </a> <!-- testEncodingWitch_26 -->
-                  <span class="method-name">testEncodingWitch_26</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEncodingWith_7">
-                  </a> <!-- testEncodingWith_7 -->
-                  <span class="method-name">testEncodingWith_7</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,15 +247,15 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testDecodingWith_26')
 data.setCell(0, 2, 'ch.unil.doplab.CaesarNGTest')
-data.setCell(0, 3, 2);
+data.setCell(0, 3, 12);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testEncodingWitch_26')
 data.setCell(1, 2, 'ch.unil.doplab.CaesarNGTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 5);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testDecodingWith_7')
 data.setCell(2, 2, 'ch.unil.doplab.CaesarNGTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 2);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testEncodingWith_7')
 data.setCell(3, 2, 'ch.unil.doplab.CaesarNGTest')
@@ -239,7 +264,7 @@ window.suiteTableData['SimpleUnitTests']= { tableData: data, tableDiv: 'times-di
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 ms</span>
+              <span class="suite-total-time">Total running time: 19 ms</span>
               <div id="times-div-SimpleUnitTests">
               </div> <!-- times-div-SimpleUnitTests -->
             </div> <!-- times-div -->
@@ -272,56 +297,60 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpMethod</span>
-                <span class="method-start">12 ms</span>
+                <span class="method-start">42 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testDecodingWith_26</span>
-                <span class="method-start">12 ms</span>
+                <span class="method-start">45 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownMethod</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-start">59 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpMethod</span>
-                <span class="method-start">15 ms</span>
+                <span class="method-start">63 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">setUpMethod</span>
-                <span class="method-start">15 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownMethod</span>
-                <span class="method-start">15 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testDecodingWith_7</span>
-                <span class="method-start">15 ms</span>
+                <span class="method-start">66 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">70 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUpMethod</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-start">76 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEncodingWitch_26</span>
+                <span class="method-start">81 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDownMethod</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpMethod</span>
+                <span class="method-start">97 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testEncodingWitch_26</span>
-                <span class="method-start">16 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEncodingWith_7</span>
+                <span class="method-start">99 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">101 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">17 ms</span>
+                <span class="method-start">106 ms</span>
               </div> <!-- configuration-class after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDownMethod</span>
-                <span class="method-start">17 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">testEncodingWith_7</span>
-                <span class="method-start">17 ms</span>
-              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
