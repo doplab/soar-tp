@@ -79,7 +79,7 @@ https://github.com/doplab/soar-tp.git
 
 #### Requirements
 1. Netbeans IDE
-2. Payara Server
+2. JUnit
 
 #### Opening the project on NetBeans IDE
 1. **File** > **Open Project** >>>
