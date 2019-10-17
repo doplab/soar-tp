@@ -22,13 +22,13 @@ public class Caesar {
     }
 
     public String encode(String message) {
-        return cipher(message);
-//        return "not implemented yet";
+//        return cipher(message);
+        return "not implemented yet";
     }
 
     public String decode(String message) {
-        return decipher(message);
-//        return "not implemented yet";
+//        return decipher(message);
+        return "not implemented yet";
     }
 
     private String cipher(String message) {
