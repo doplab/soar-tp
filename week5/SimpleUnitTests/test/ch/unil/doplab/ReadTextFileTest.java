@@ -3,7 +3,6 @@ package ch.unil.doplab;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import static org.testng.Assert.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
