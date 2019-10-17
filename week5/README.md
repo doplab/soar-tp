@@ -71,7 +71,7 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 
 ```
 **Recurrent errors**
-*Java Fatal Error: Unable to find package java.lang in classpath or bootclasspath*: This issue happen when Netbeans cannot find your JDK or it is unproperly configured. To solve it, you can right-click on your project > properties > Libraries > Select a Java Platform
+*Java Fatal Error: Unable to find package java.lang in classpath or bootclasspath*: This issue happen when Netbeans cannot find your JDK or it is improperly configured. To solve it, you can right-click on your project > properties > Libraries > Select a Java Platform
 
 ```
 
@@ -82,6 +82,13 @@ https://github.com/doplab/soar-tp.git
 
 ### Installing Payara Server
 1. Open Netbeans
+2. Go to Tools > Plugins > Search "*Payara*" > Check the following plugins:
+- Payara Server - the main plugin, and contains the server plugin features
+- Payara Common - common shared code between server and micro plugins
+- Payara EE Common - API and SPI code for both plugins
+- Payara Tooling - UI related source for both plugins
+3. Click install once all the relevant plugins are selected, and follow the installation wizard.
+4. Click on *Finish* and Restart Netbeans.
 2. Go to Services tab on Netbeans (If you don't see **Services** tab, click on **Windows** > **Reset Windows**)
 3. Right click on **Servers**
 4. Click on **Add server**
@@ -89,7 +96,7 @@ https://github.com/doplab/soar-tp.git
 6. Choose an **Installation Location** (and make sure there is no space in the installation path)
 Please note, if you remove the Payara Server folder later, you won’t be able to use it anymore.
 7.	Choose **Local Domain**
-8.	Below **Choose server to download**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
+8.	Below **Choose Payara Server 5.184**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
 9.	After it is done, click **Next**
 10.	Leave the **Domain** as it is (“domain1”), type a user name and password (if you want to)
 11.	**Finish**
