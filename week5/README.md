@@ -1,3 +1,4 @@
+
 # Software Architecture
 # Week 5
 
@@ -76,7 +77,7 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 `
 
 #### Using Source Tree
-1. Click **File** > **Clone / New* 
+1. Click **File** > **Clone / New** 
 2. Enter the URL below to **Source Path / URL** and choose a **Destination Path** and **Clone** the project.
 https://github.com/doplab/soar-tp.git
 
@@ -88,26 +89,26 @@ https://github.com/doplab/soar-tp.git
 - Payara EE Common - API and SPI code for both plugins
 - Payara Tooling - UI related source for both plugins
 3. Click install once all the relevant plugins are selected, and follow the installation wizard.
-4. Click on *Finish* and Restart Netbeans.
-2. Go to Services tab on Netbeans (If you don't see **Services** tab, click on **Windows** > **Reset Windows**)
-3. Right click on **Servers**
-4. Click on **Add server**
-5. From the server list, choose **Payara Server**
-6. Choose an **Installation Location** (and make sure there is no space in the installation path)
+4. Click on **Finish** and **Restart** Netbeans.
+5. Go to Services tab on Netbeans (If you don't see **Services** tab, click on **Windows** > **Reset Windows**)
+6. Right click on **Servers**
+7. Click on **Add server**
+8. From the server list, choose **Payara Server**
+9. Choose an **Installation Location** (and make sure there is no space in the installation path)  
 Please note, if you remove the Payara Server folder later, you won’t be able to use it anymore.
-7.	Choose **Local Domain**
-8.	Below **Choose Payara Server 5.184**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
-9.	After it is done, click **Next**
-10.	Leave the **Domain** as it is (“domain1”), type a user name and password (if you want to)
-11.	**Finish**
+11.	Choose **Local Domain**
+12.	Below **Choose Payara Server 5.184**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
+13.	After it is done, click **Next**
+14.	Leave the **Domain** as it is (i.e. “domain1”), type a user name and password (if you want to)
+15.	**Finish**
 
 ### Starting Payara Server
-1.	Go to Services tab
-2.	Expand Servers, there you should have Payara Server
-3.	Right-click on Payara Server and Start
+1.	Go to **Services** tab
+2.	Expand Servers, there you should have **Payara Server**
+3.	Right-click on Payara Server and **Start**
  
-### Opening a project on NetBeans
-1. File >> Open Project
+### Opening a project on NetBeans (and running EJB projects)
+1. **File** >> **Open Project**
 2. Navigate to your project
 1.	Right-click on the project >> **Run**
 2.	When you run an EJB project for the first time you will be prompted to select a deployment server. Select **Payara Server** and **Remember in Current IDE Session** or **Remember Permanently**. 
@@ -119,6 +120,7 @@ Please note, if you remove the Payara Server folder later, you won’t be able t
 #### Requirements
 1. Netbeans IDE
 2. JUnit
+3. TestNG
 
 #### Running the Unit Test
 
@@ -129,6 +131,7 @@ The goal of this exercise is to run a unit test to see how the methods behave. O
 2. Navigate to `week5>SimpleUnitTests`
 3. Run the unit test by right-clicking on your project > **Test**
 
+### Exercise 1 - CaesarNGTest.java
 You will observe that only 50% of the unit tests are executed successfully.
 
 ### Implement the encode() method
@@ -137,8 +140,8 @@ In this session, we will implement the **encode()** method by returning the Ciph
 The **encode()** method should look like this:
 ```Java
 public String encode(String message) {
-        return cipher(message);
-    }
+    return cipher(message);
+}
 ```
 Now, if you re-run the tests, you will observe that 100% of the unit tests are executed successfully.
 
@@ -148,7 +151,18 @@ In this exercise, you have to write 4 additional tests:
 2. a set of **two tests** for testing that the result is identical for key = 3 and key = 29, again for the encode() + decode() methods;
 After running the tests, you will observe that they successfully pass even if both **encode()** and **decode()** methods return "not implemented yet".
 
-### Opening and reading files via unit testing annotations
+### Exercise 2 - ReadTextFileTest.java
+In ReadTextFile.java, a simple text reader is implemented.
+
+In ReadTextFileTest.java, you will see that all test cases pass successfully. The purpose of this exercise is to show you some good practices of using;
+1. @BeforeClass annotation, is executed before all test methods (@Test) of the class. For instance; you can put initialization code here. 
+Here, we use this annotation to read from a file and initialize the nameList.
+2. @AfterClass annotationn, is executed after all test methods (@Test) of the class. For instance, you can write cleanup code here.
+We use this annotation to clear the nameList and close the file we were working on.
+3. Exception testing - @Test(expectedExceptions = <exceptionName>.class) 
+In order to test an exeption, you must specify which exception is expected when the test method is executed. 
+4. Timeout testing - @Test(timeOut = 100) 
+Sometimes a test might run too long than it is expected. In such cases, you can limit the run time of a test by setting a timeOut value. If the test takes longer than a defined timeOut value, it will fail. (timeOut value is in milliseconds)
 
 ## EJB Exercises
 
@@ -180,4 +194,4 @@ A simple **singleton bean** is implemented in the counter application.
 
 1. After running the example, the next step is to write our own application with a **stateless session bean** doing the caesar conversion. For this exercise, we will use the **converter app** as template.
 2. Write an ejb-based application with a **stateful session bean** doing the caesar conversion, using the **converter app** as template.
-3. Write an ejb-based application with a **singleton bean** doing the caesar conversion, with the caching of already encoded/decoded pairs.
+3. **Singleton Session Bean** - For this exercise, you're expected to complete the **CaesarSingletonBean.java**. You are given the lists of already encoded/decoded pairs. Make sure you have all the accessors and mutators needed.
