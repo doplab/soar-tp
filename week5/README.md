@@ -140,7 +140,7 @@ public String encode(String message) {
         return cipher(message);
     }
 ```
-Now, if you re-run the tests, you will observe that now 100% of the unit tests are now executed successfully.
+Now, if you re-run the tests, you will observe that 100% of the unit tests are executed successfully.
 
 ### Write additional tests
 In this exercise, you have to write 4 additional tests:
@@ -160,7 +160,7 @@ After running the tests, you will observe that they successfully pass even if bo
 The goal of this exercise is to show how Session bean works. During this session, we will highlight the differences between stateless **session bean**, **stateful session bean** and **singleton bean**.
 
 **Opening the project on NetBeans IDE**
-1. **File** > **Open Project** >>>
+1. **File** > **Open Project**
 2. Navigate to `week5>tutorial-examples-master`
 
 ### Run the examples
