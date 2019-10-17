@@ -88,6 +88,19 @@ Please note, if you remove the Payara Server folder later, you won’t be able t
 10.	Leave the **Domain** as it is (“domain1”), type a user name and password (if you want to)
 11.	**Finish**
 
+### Starting Payara Server
+1.	Go to Services tab
+2.	Expand Servers, there you should have Payara Server
+3.	Right-click on Payara Server and Start
+ 
+### Opening a project on NetBeans
+1. File >> Open Project
+2. Navigate to your project
+Running a project (for EJB exercises)
+1.	Right-click on the project >> **Run**
+2.	When you run an EJB project for the first time you will be prompt to select a deployment server. Select **Payara Server** and **Remember in Current IDE Session** or **Remember Permanently**. 
+3.	NetBeans will run the application and direct you to **localhost:8080/<project_name>**
+
 
 ## Modularity and Unit Testing
 
@@ -99,7 +112,7 @@ Please note, if you remove the Payara Server folder later, you won’t be able t
 1. **File** > **Open Project** >>>
 2. Navigate to `week5>SimpleUnitTests`
 
-## Remote invocation and transactions
+## EJB Exercises
 
 #### Requirements
 1. Netbeans IDE
