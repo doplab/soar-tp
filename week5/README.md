@@ -69,11 +69,11 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 4. Link the project to your newly created repository by doing: `git remote add origin <link-to-your-repo>` 
 5. Make your changes, then push to your repository: `git push -u origin master`
 
-```
+`
 **Recurrent errors**
 *Java Fatal Error: Unable to find package java.lang in classpath or bootclasspath*: This issue happen when Netbeans cannot find your JDK or it is improperly configured. To solve it, you can right-click on your project > properties > Libraries > Select a Java Platform
 
-```
+`
 
 #### Using Source Tree
 1. Click **File** > **Clone / New* 
