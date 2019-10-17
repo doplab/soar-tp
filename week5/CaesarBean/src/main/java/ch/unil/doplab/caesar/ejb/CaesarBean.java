@@ -3,35 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.unil.doplab.unit;
+package ch.unil.doplab.caesar.ejb;
+
+import javax.ejb.Stateless;
 
 /**
  *
  * @author garbi
  */
-public class Caesar {
+@Stateless
+public class CaesarBean implements CaesarBeanLocal {
 
-    private int key;
-
-    public Caesar(int key) {
-        this.key = key;
-    }
-
-    public void setKey(int key) {
-        this.key = key % 26;
-    }
-
-    public String encode(String message) {
-//        return cipher(message);
-        return "not implemented yet";
-    }
-
-    public String decode(String message) {
-//        return decipher(message);
-        return "not implemented yet";
-    }
-
-    private String cipher(String message) {
+    @Override
+    public String encode(String message, int key) {
         String encryptedMessage = "";
         char ch;
 
@@ -61,7 +45,8 @@ public class Caesar {
         return encryptedMessage;
     }
 
-    private String decipher(String message) {
+    @Override
+    public String decode(String message, int key) {
         String decryptedMessage = "";
         char ch;
 
@@ -90,4 +75,7 @@ public class Caesar {
         }
         return decryptedMessage;
     }
+
+    // Add business logic below. (Right-click in editor and choose
+    // "Insert Code > Add Business Method")
 }

@@ -69,6 +69,12 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 4. Link the project to your newly created repository by doing: `git remote add origin <link-to-your-repo>` 
 5. Make your changes, then push to your repository: `git push -u origin master`
 
+`
+**Recurrent errors**
+*Java Fatal Error: Unable to find package java.lang in classpath or bootclasspath*: This issue happen when Netbeans cannot find your JDK or it is improperly configured. To solve it, you can right-click on your project > properties > Libraries > Select a Java Platform
+
+`
+
 #### Using Source Tree
 1. Click **File** > **Clone / New* 
 2. Enter the URL below to **Source Path / URL** and choose a **Destination Path** and **Clone** the project.
@@ -76,6 +82,13 @@ https://github.com/doplab/soar-tp.git
 
 ### Installing Payara Server
 1. Open Netbeans
+2. Go to Tools > Plugins > Search "*Payara*" > Check the following plugins:
+- Payara Server - the main plugin, and contains the server plugin features
+- Payara Common - common shared code between server and micro plugins
+- Payara EE Common - API and SPI code for both plugins
+- Payara Tooling - UI related source for both plugins
+3. Click install once all the relevant plugins are selected, and follow the installation wizard.
+4. Click on *Finish* and Restart Netbeans.
 2. Go to Services tab on Netbeans (If you don't see **Services** tab, click on **Windows** > **Reset Windows**)
 3. Right click on **Servers**
 4. Click on **Add server**
@@ -83,7 +96,7 @@ https://github.com/doplab/soar-tp.git
 6. Choose an **Installation Location** (and make sure there is no space in the installation path)
 Please note, if you remove the Payara Server folder later, you won’t be able to use it anymore.
 7.	Choose **Local Domain**
-8.	Below **Choose server to download**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
+8.	Below **Choose Payara Server 5.184**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
 9.	After it is done, click **Next**
 10.	Leave the **Domain** as it is (“domain1”), type a user name and password (if you want to)
 11.	**Finish**
@@ -127,7 +140,7 @@ public String encode(String message) {
         return cipher(message);
     }
 ```
-Now, if you re-run the tests, you will observe that now 100% of the unit tests are now executed successfully.
+Now, if you re-run the tests, you will observe that 100% of the unit tests are executed successfully.
 
 ### Write additional tests
 In this exercise, you have to write 4 additional tests:
@@ -147,11 +160,11 @@ After running the tests, you will observe that they successfully pass even if bo
 The goal of this exercise is to show how Session bean works. During this session, we will highlight the differences between stateless **session bean**, **stateful session bean** and **singleton bean**.
 
 **Opening the project on NetBeans IDE**
-1. **File** > **Open Project** >>>
+1. **File** > **Open Project**
 2. Navigate to `week5>tutorial-examples-master`
 
 ### Run the examples
-The sample project includes many modules implementing the different type of session beans. We will focus on the **converter example** which shows a simple **stateless session bean** and the **counter example** which shows a simple **singleton bean**
+The sample project includes many modules implementing the different types of session beans. We will focus on the **converter example** which shows a simple **stateless session bean** and the **counter example** which shows a simple **singleton bean**
 
 Please note that everytime you click on a module, NetBeans will open the module as a different project. Be patient.
 
