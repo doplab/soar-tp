@@ -13,13 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.ejb.EJB;
 import ch.unil.doplab.caesar.ejb.CaesarSingletonBean;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 
 /**
  *
  * @author garbi
  */
-@WebServlet(urlPatterns = "/caesarsingleton")
+
 public class CaesarSingletonServlet extends HttpServlet {
 
     @EJB
@@ -39,7 +40,10 @@ public class CaesarSingletonServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
+            String key_check = request.getParameter("key");
+            
+            if (key_check != null){
+                out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Caesar Singleton Ciphering – Output</title>");
@@ -50,6 +54,7 @@ public class CaesarSingletonServlet extends HttpServlet {
             String output = "";
             String input = "hello";
             String action = request.getParameter("action");
+            
             int key = Integer.parseInt(request.getParameter("key"));
             caesar.setKey(key);
 
@@ -74,6 +79,17 @@ public class CaesarSingletonServlet extends HttpServlet {
 
             out.println("</body>");
             out.println("</html>");
+                
+            }
+            else
+            {
+                RequestDispatcher rd = request.getRequestDispatcher("/indexSingleton.html");
+                rd.forward(request, response);
+                
+            }
+            
+            
+            
         }
     }
 

@@ -4,9 +4,25 @@
         <servlet-name>CaesarServlet</servlet-name>
         <servlet-class>ch.unil.doplab.caesar.web.CaesarServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CaesarSingletonServlet</servlet-name>
+        <servlet-class>ch.unil.doplab.caesar.web.CaesarSingletonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Stateful</servlet-name>
+        <servlet-class>ch.unil.doplab.caesar.web.Stateful</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CaesarServlet</servlet-name>
-        <url-pattern>/CaesarServlet</url-pattern>
+        <url-pattern>/caesar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CaesarSingletonServlet</servlet-name>
+        <url-pattern>/caesarsingleton</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Stateful</servlet-name>
+        <url-pattern>/Stateful</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

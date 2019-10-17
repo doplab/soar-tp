@@ -7,23 +7,19 @@ package ch.unil.doplab.caesar.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.ejb.EJB;
-import ch.unil.doplab.caesar.ejb.CaesarBeanLocal;
-import javax.servlet.annotation.WebServlet;
 
 /**
  *
- * @author garbi
+ * @author Admin
  */
-
-public class CaesarServlet extends HttpServlet {
-
-    @EJB
-    CaesarBeanLocal caesar;
+public class Stateful extends HttpServlet {
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,44 +32,9 @@ public class CaesarServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Caesar Ciphering – Output</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CaesarServlet at " + request.getContextPath() + "</h1>");
-
-            String output = "";
-            String input = request.getParameter("message");
-            String action = request.getParameter("action");
-            int key = Integer.parseInt(request.getParameter("key"));
-
-            out.println("input   = " + input + "<br>");
-            out.println("key     = " + key + "<br>");
-            out.println("action  = " + action + "<br>");
-
-            if (action.equals("encode")) {
-                output = this.caesar.encode(input, key);
-
-            } else if (action.equals("decode")) {
-                output = this.caesar.decode(input, key);
-            } else {
-                output = action + " is unknown!";
-            }
-
-            out.println("---------------<br>");
-
-            out.println("output = " + output + "<br>");
-
-            out.println("---------------<br>");
-
-            out.println("</body>");
-            out.println("</html>");
-        }
+        RequestDispatcher rd = request.getRequestDispatcher("/stateful.jsp");
+        
+        rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -88,7 +49,19 @@ public class CaesarServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        RequestDispatcher rd = request.getRequestDispatcher("/stateful.jsp");
+        String key = request.getParameter("key");
+        String sentence = request.getParameter("message");
+        
+        if (key != null){
+            //String txt_encode = converter.encode(sentence);
+            String txt_encode = "test1";
+            request.setAttribute("encode", txt_encode);
+        }
+        
+        rd.forward(request, response);
+        //processRequest(request, response);
     }
 
     /**
