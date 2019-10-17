@@ -74,6 +74,20 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 2. Enter the URL below to **Source Path / URL** and choose a **Destination Path** and **Clone** the project.
 https://github.com/doplab/soar-tp.git
 
+### Installing Payara Server
+1. Open Netbeans
+2. Go to Services tab on Netbeans (If you don't see **Services** tab, click on **Windows** > **Reset Windows**)
+3. Right click on **Servers**
+4. Click on **Add server**
+5. From the server list, choose **Payara Server**
+6. Choose an **Installation Location** (and make sure there is no space in the installation path)
+Please note, if you remove the Payara Server folder later, you won’t be able to use it anymore.
+7.	Choose **Local Domain**
+8.	Below **Choose server to download**, you will see **Download** option, click it and wait for NetBeans to download and install Payara Server. (this will take some time)
+9.	After it is done, click **Next**
+10.	Leave the **Domain** as it is (“domain1”), type a user name and password (if you want to)
+11.	**Finish**
+
 
 ## Modularity and Unit Testing
 
