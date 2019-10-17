@@ -1,9 +1,9 @@
 # Software Architecture
 # Week 5
 
-# Quick reminder
-## How to install Git
-### On Mac OS
+## Quick reminder
+### How to install Git
+#### On Mac OS
 The easiest way to install Git on a Mac is via the stand-alone installer:
 1. Download the latest [Git for Mac installer](https://sourceforge.net/projects/git-osx-installer/files/).
 
@@ -44,7 +44,7 @@ $ git config --global user.email "eparis@atlassian.com"
 ```
 4. (Optional) To make Git remember your username and password when working with HTTPS repositories, install the [git-credential-osxkeychain helper](https://www.atlassian.com/git/tutorials/install-git#install-the-git-credential-osx).
 
-### Install Git on Windows
+#### Install Git on Windows
 1. Download the latest [Git for Windows installer](https://git-for-windows.github.io/).
 
 2. When you've successfully started the installer, you should see the Git Setup wizard screen. Follow the Next and Finish prompts to complete the installation. The default options are pretty sensible for most users.
@@ -60,7 +60,7 @@ $ git config --global user.email "eparis@atlassian.com"
 
 Bitbucket supports pushing and pulling over HTTP to your remote Git repositories on Bitbucket. Every time you interact with the remote repository, you must supply a username/password combination. You can store these credentials, instead of supplying the combination every time, with the [Git Credential Manager for Windows](https://github.com/Microsoft/Git-Credential-Manager-for-Windows).
 
-## Setting up the tools
+### Setting up the tools
 
 #### Download the projects
 1. Clone the project repository (https://github.com/doplab/soar-tp.git)
@@ -96,10 +96,9 @@ Please note, if you remove the Payara Server folder later, you won’t be able t
 ### Opening a project on NetBeans
 1. File >> Open Project
 2. Navigate to your project
-Running a project (for EJB exercises)
 1.	Right-click on the project >> **Run**
-2.	When you run an EJB project for the first time you will be prompt to select a deployment server. Select **Payara Server** and **Remember in Current IDE Session** or **Remember Permanently**. 
-3.	NetBeans will run the application and direct you to **localhost:8080/<project_name>**
+2.	When you run an EJB project for the first time you will be prompted to select a deployment server. Select **Payara Server** and **Remember in Current IDE Session** or **Remember Permanently**. 
+3.	NetBeans will run the application and redirect you to **localhost:8080/<project_name>**
 
 
 ## Modularity and Unit Testing
@@ -110,10 +109,10 @@ Running a project (for EJB exercises)
 
 #### Running the Unit Test
 
-The goal of this exercise is to run a unit test to see how the methods behaves. Our sample project is a Caesar cipher project with two main functions: Encoding and decoding a String.
+The goal of this exercise is to run a unit test to see how the methods behave. Our sample project is a **Caesar cipher** project with two main functions: Encoding and decoding a String.
 
 **Opening the project on NetBeans IDE**
-1. **File** > **Open Project** >>>
+1. **File** > **Open Project**
 2. Navigate to `week5>SimpleUnitTests`
 3. Run the unit test by right-clicking on your project > **Test**
 
@@ -157,8 +156,11 @@ The sample project includes many modules implementing the different type of sess
 Please note that everytime you click on a module, NetBeans will open the module as a different project. Be patient.
 
 1. Open **Java EE Tutorials Examples >> Modules >> ejb >> converter**
+
 A simple **stateless session bean** is implemented in the converter application.
+
 2.	Open **Java EE Tutorials Examples >> Modules >> ejb >> counter**
+
 A simple **singleton bean** is implemented in the counter application.
 
 ### Write your own application
