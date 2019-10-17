@@ -108,9 +108,35 @@ Running a project (for EJB exercises)
 1. Netbeans IDE
 2. JUnit
 
-#### Opening the project on NetBeans IDE
+#### Running the Unit Test
+
+The goal of this exercise is to run a unit test to see how the methods behaves. Our sample project is a Caesar cipher project with two main functions: Encoding and decoding a String.
+
+**Opening the project on NetBeans IDE**
 1. **File** > **Open Project** >>>
 2. Navigate to `week5>SimpleUnitTests`
+3. Run the unit test by right-clicking on your project > **Test**
+
+You will observe that only 50% of the unit tests are executed successfully.
+
+### Implement the encode() method
+
+In this session, we will implement the **encode()** method by returning the Cipher of the message.
+The **encode()** method should look like this:
+```Java
+public String encode(String message) {
+        return cipher(message);
+    }
+```
+Now, if you re-run the tests, you will observe that now 100% of the unit tests are now executed successfully.
+
+### Write additional tests
+In this exercise, you have to write 4 additional tests:
+1. A set of **two tests** with k = 0 for the encode() + decode() methods
+2. a set of **two tests** for testing that the result is identical for key = 3 and key = 29, again for the encode() + decode() methods;
+After running the tests, you will observe that they successfully pass even if both **encode()** and **decode()** methods return "not implemented yet".
+
+### Opening and reading files via unit testing annotations
 
 ## EJB Exercises
 
@@ -118,7 +144,25 @@ Running a project (for EJB exercises)
 1. Netbeans IDE
 2. Payara Server
 
-#### Opening the project on NetBeans IDE
+### Running an example with session beans
+The goal of this exercise is to show how Session bean works. During this session, we will highlight the differences between stateless **session bean**, **stateful session bean** and **singleton bean**.
+
+**Opening the project on NetBeans IDE**
 1. **File** > **Open Project** >>>
 2. Navigate to `week5>tutorial-examples-master`
 
+### Run the examples
+The sample project includes many modules implementing the different type of session beans. We will focus on the **converter example** which shows a simple **stateless session bean** and the **counter example** which shows a simple **singleton bean**
+
+Please note that everytime you click on a module, NetBeans will open the module as a different project. Be patient.
+
+1. Open **Java EE Tutorials Examples >> Modules >> ejb >> converter**
+A simple **stateless session bean** is implemented in the converter application.
+2.	Open **Java EE Tutorials Examples >> Modules >> ejb >> counter**
+A simple **singleton bean** is implemented in the counter application.
+
+### Write your own application
+
+1. After running the example, the next step is to write our own application with a **stateless session bean** doing the caesar conversion. For this exercise, we will use the **converter app** as template.
+2. Write an ejb-based application with a **stateful session bean** doing the caesar conversion, using the **converter app** as template.
+3. Write an ejb-based application with a **singleton bean** doing the caesar conversion, with the caching of already encoded/decoded pairs.
