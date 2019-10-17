@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ch.unil.doplab.ceasarcipher.web;
+package ch.unil.doplab.caesarcipher.web;
 
 import ch.unil.doplab.caesarcipher.ejb.CaesarConverter;
 import ch.unil.doplab.caesarcipher.ejb.test;
@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Admin
  */
-public class CeasarCipherStateless extends HttpServlet {
+public class CaesarCipherStateless extends HttpServlet {
 
     @EJB
     private test t;
@@ -59,10 +59,10 @@ public class CeasarCipherStateless extends HttpServlet {
             throws ServletException, IOException {
         
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/stateless.jsp");
-        int key = Integer.parseInt(request.getParameter("key"));
+        String key = request.getParameter("key");
         String sentence = request.getParameter("sentence");
         
-        if (key != 0){
+        if (key != null){
             converter.setKey(key);
             String txt_encode = converter.encode(sentence);
             //String txt_encode = "test1";

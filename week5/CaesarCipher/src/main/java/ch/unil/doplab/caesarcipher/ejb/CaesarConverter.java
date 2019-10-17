@@ -17,8 +17,8 @@ public class CaesarConverter {
     private int key = 0;
 
 
-    public void setKey(int key) {
-        this.key = key % 26;
+    public void setKey(String key) {
+        this.key = Integer.parseInt(key) % 26;
     }
     
     public int getKey(){
