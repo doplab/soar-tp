@@ -69,6 +69,12 @@ Bitbucket supports pushing and pulling over HTTP to your remote Git repositories
 4. Link the project to your newly created repository by doing: `git remote add origin <link-to-your-repo>` 
 5. Make your changes, then push to your repository: `git push -u origin master`
 
+```
+**Recurrent errors**
+*Java Fatal Error: Unable to find package java.lang in classpath or bootclasspath*: This issue happen when Netbeans cannot find your JDK or it is unproperly configured. To solve it, you can right-click on your project > properties > Libraries > Select a Java Platform
+
+```
+
 #### Using Source Tree
 1. Click **File** > **Clone / New* 
 2. Enter the URL below to **Source Path / URL** and choose a **Destination Path** and **Clone** the project.
@@ -151,7 +157,7 @@ The goal of this exercise is to show how Session bean works. During this session
 2. Navigate to `week5>tutorial-examples-master`
 
 ### Run the examples
-The sample project includes many modules implementing the different type of session beans. We will focus on the **converter example** which shows a simple **stateless session bean** and the **counter example** which shows a simple **singleton bean**
+The sample project includes many modules implementing the different types of session beans. We will focus on the **converter example** which shows a simple **stateless session bean** and the **counter example** which shows a simple **singleton bean**
 
 Please note that everytime you click on a module, NetBeans will open the module as a different project. Be patient.
 
