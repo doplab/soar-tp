@@ -60,7 +60,7 @@ public class CaesarNGTest {
         int key = 7;
         System.out.println("decoding with key = " + key);
         String message = "Jvdhykz kpl thuf aptlz ilmvyl aolpy klhaoz";
-        Caesar instance = new Caesar(key);;
+        Caesar instance = new Caesar(key);
         String expResult = "Cowards die many times before their deaths";
         String result = instance.decode(message);
         assertEquals(result, expResult);
@@ -90,6 +90,18 @@ public class CaesarNGTest {
         String message = "Cowards die many times before their deaths";
         String result = instance.decode(message);
         assertEquals(result, message);
+    }
+    
+    @Test
+    public void testEncodingWitch_29() {
+        int key = 29;
+        System.out.println("encoding with key = " + key);
+        Caesar instance = new Caesar(key);
+        String message = "Cowards die many times before their deaths";
+        String expResult = "Frzdugv glh pdqb wlphv ehiruh wkhlu ghdwkv";
+        String expResult27 = "Dpxbset ejf nboz ujnft cfgpsf uifjs efbuit";
+        String result = instance.encode(message);
+        assertEquals(result, expResult);
     }
 
 }

@@ -14,7 +14,7 @@ public class Caesar {
     private int key;
 
     public Caesar(int key) {
-        this.key = key;
+        this.key = key % 26;
     }
 
     public void setKey(int key) {
@@ -22,13 +22,13 @@ public class Caesar {
     }
 
     public String encode(String message) {
-//        return cipher(message);
-        return "not implemented yet";
+        return cipher(message);
+//        return "not implemented yet";
     }
 
     public String decode(String message) {
-//        return decipher(message);
-        return "not implemented yet";
+        return decipher(message);
+//        return "not implemented yet";
     }
 
     private String cipher(String message) {
