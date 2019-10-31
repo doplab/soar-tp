@@ -85,6 +85,6 @@ public class ConfigBean {
 
     @PreDestroy
     public void deleteData() {
-        
+
     }
 }

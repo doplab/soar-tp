@@ -14,22 +14,20 @@ import java.io.Serializable;
  * @author ian
  */
 public class PartKey implements Serializable {
+
     private static final long serialVersionUID = -3162267592969127613L;
     private String partNumber;
     private int revision;
-    
+
     @Override
     public int hashCode() {
-        return (
-                (this.getPartNumber()==null?0:this.getPartNumber().hashCode())
-                ^
-                ((int) this.getRevision())
-                );
+        return ((this.getPartNumber() == null ? 0 : this.getPartNumber().hashCode())
+                ^ ((int) this.getRevision()));
     }
-    
+
     @Override
     public boolean equals(Object otherOb) {
-        
+
         if (this == otherOb) {
             return true;
         }
@@ -37,13 +35,10 @@ public class PartKey implements Serializable {
             return false;
         }
         PartKey other = (PartKey) otherOb;
-        return (
-                (this.getPartNumber()==null?other.getPartNumber()==null:this.getPartNumber().equals(other.getPartNumber()))
-                &&
-                (getRevision() == other.getRevision())
-                );
+        return ((this.getPartNumber() == null ? other.getPartNumber() == null : this.getPartNumber().equals(other.getPartNumber()))
+                && (getRevision() == other.getRevision()));
     }
-    
+
     @Override
     public String toString() {
         return getPartNumber() + " rev" + this.getRevision();

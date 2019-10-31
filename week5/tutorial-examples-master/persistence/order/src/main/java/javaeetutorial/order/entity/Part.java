@@ -30,17 +30,18 @@ import static javax.persistence.TemporalType.DATE;
 
 @IdClass(PartKey.class)
 @Entity
-@Table(name="PERSISTENCE_ORDER_PART")
-@SecondaryTable(name="PERSISTENCE_ORDER_PART_DETAIL", pkJoinColumns={
-   @PrimaryKeyJoinColumn(name="PARTNUMBER", referencedColumnName="PARTNUMBER"),
-   @PrimaryKeyJoinColumn(name="REVISION", referencedColumnName="REVISION")
+@Table(name = "PERSISTENCE_ORDER_PART")
+@SecondaryTable(name = "PERSISTENCE_ORDER_PART_DETAIL", pkJoinColumns = {
+    @PrimaryKeyJoinColumn(name = "PARTNUMBER", referencedColumnName = "PARTNUMBER"),
+    @PrimaryKeyJoinColumn(name = "REVISION", referencedColumnName = "REVISION")
 })
 @NamedQuery(
-    name="findAllParts",
-    query="SELECT p FROM Part p " +
-          "ORDER BY p.partNumber"
+        name = "findAllParts",
+        query = "SELECT p FROM Part p "
+        + "ORDER BY p.partNumber"
 )
 public class Part implements Serializable {
+
     private static final long serialVersionUID = -3082087016342644227L;
     private String partNumber;
     private int revision;
@@ -51,9 +52,10 @@ public class Part implements Serializable {
     private Part bomPart;
     private List<Part> parts;
     private VendorPart vendorPart;
-    
-    public Part() {}
-    
+
+    public Part() {
+    }
+
     public Part(String partNumber,
             int revision,
             String description,
@@ -70,7 +72,7 @@ public class Part implements Serializable {
     }
 
     @Id
-    @Column(nullable=false)
+    @Column(nullable = false)
     public String getPartNumber() {
         return partNumber;
     }
@@ -80,7 +82,7 @@ public class Part implements Serializable {
     }
 
     @Id
-    @Column(nullable=false)
+    @Column(nullable = false)
     public int getRevision() {
         return revision;
     }
@@ -106,7 +108,7 @@ public class Part implements Serializable {
         this.revisionDate = revisionDate;
     }
 
-    @Column(table="PERSISTENCE_ORDER_PART_DETAIL")
+    @Column(table = "PERSISTENCE_ORDER_PART_DETAIL")
     @Lob
     public Serializable getDrawing() {
         return drawing;
@@ -116,7 +118,7 @@ public class Part implements Serializable {
         this.drawing = drawing;
     }
 
-    @Column(table="PERSISTENCE_ORDER_PART_DETAIL")
+    @Column(table = "PERSISTENCE_ORDER_PART_DETAIL")
     @Lob
     public String getSpecification() {
         return specification;
@@ -128,8 +130,8 @@ public class Part implements Serializable {
 
     @ManyToOne
     @JoinColumns({
-        @JoinColumn(name="BOMPARTNUMBER", referencedColumnName="PARTNUMBER"),
-        @JoinColumn(name="BOMREVISION", referencedColumnName="REVISION")
+        @JoinColumn(name = "BOMPARTNUMBER", referencedColumnName = "PARTNUMBER"),
+        @JoinColumn(name = "BOMREVISION", referencedColumnName = "REVISION")
     })
     public Part getBomPart() {
         return bomPart;
@@ -139,7 +141,7 @@ public class Part implements Serializable {
         this.bomPart = bomPart;
     }
 
-    @OneToMany(mappedBy="bomPart")
+    @OneToMany(mappedBy = "bomPart")
     public List<Part> getParts() {
         return parts;
     }
@@ -148,7 +150,7 @@ public class Part implements Serializable {
         this.parts = parts;
     }
 
-    @OneToOne(mappedBy="part")
+    @OneToOne(mappedBy = "part")
     public VendorPart getVendorPart() {
         return vendorPart;
     }
