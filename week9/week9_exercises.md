@@ -15,7 +15,8 @@ The goal of this project is to create a simple page containing a form. We will u
 Each employee should have an First name, last name and a position.
 
 ## JavaServer Page
-
+JavaServer Pages (JSP) is a collection of technologies that helps software developers create dynamically generated web pages based on HTML, XML, SOAP, or other document types.
+In this section, we will create a simple page using JSP
 
 ## JavaServer Faces
 
@@ -27,7 +28,7 @@ To create our project using Netbeans, we will follow the steps below:
 1. Open Netbeans
 2. Create a New Project (File > New Project > Java with Maven > Web Application)
 3. Let's call it "Sample_JSF", click on _Finish_. Your project is ready!
-4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will create 3 differents packages:
+4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will only need one package:
    - Beans (com.mycompany.beans)
 
 5. Now, we can create our bean. It will contain the properties of our employees (First name, last name, position). To create a new bean, we have to right click on the bean package(com.mycompany.beans) and click on _New > Other > JavaServer Faces > JSF CDI Bean_.
@@ -98,9 +99,37 @@ To create our project using Netbeans, we will follow the steps below:
 
 The JSF runtime searches for a file named `welcomeEmployee`. It assumes the file extension is the same as the extension used by file from which the request originated (`createEmployee.xhtml`) and looks for the `welcomeEmployee` file in the same directory as the originating file (i.e., the webroot).
 
-2.  The Facelet `welcomeEmployee` will show the overwritten attributes of `EmployeeBean`. We can simply call these attributes using EL expressions `#{employeeBean.(Atribute)}`
+2.  The Facelet `welcomeEmployee` will show the overwritten attributes of `EmployeeBean`. We can simply call these attributes using EL expressions `#{employeeBean.(Atribute)}`. Our `welcomeEmployee`'s file should look like this:
+```HTML
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
 
->Expression Language (EL) are simple expressions to dynamically access data from JavaBeans components.
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="resources/css/default.css"/>
+        <h:outputStylesheet name="resources/css/cssLayout.css"/>
+        <title>Welcome Employee</title>
+    </h:head>
+
+    <h:body>
+        <!-- Header -->
+        <div id="top" class="top">
+            <ui:insert name="top"><h1>Welcome #{employeeBean.firstName}, #{employeeBean.lastName}</h1></ui:insert>
+        </div>
+        <!-- Content -->
+        <div id="content" class="center_content">
+            <ui:insert name="content">Position of the new Employee <b>#{employeeBean.position}</b></ui:insert>
+        </div>
+
+    </h:body>
+
+</html>
+```
+
+> Expression Language (EL) are simple expressions to dynamically access data from JavaBeans components.
 > EL provides a way to use simple expressions to perform the following tasks:
 > * Dynamically read application data stored in JavaBeans components, various data structures, and implicit objects
 > * Dynamically write data, such as user input into forms, to JavaBeans components
@@ -108,9 +137,14 @@ The JSF runtime searches for a file named `welcomeEmployee`. It assumes the file
 > * Dynamically perform arithmetic, boolean, and string operations.
 > * Dynamically construct collection objects and perform operations on collections
 
-> ## Recurrent issue:
-> Unable to find resource ./css/default.css: To fix it, remove "./" on your resources path.
+8. Run the project: Run click on `createEmployee.xhtml` > Run File
+   
+
+ ## Recurrent issue:
+1. Unable to find resource ./css/default.css: To fix it, remove "./" on your resources path.
 The new *h* tag should look like this:  `<h:outputStylesheet name="resources/css/default.css"/>`
+2. `... Target Unreachable, identifier 'bean' resolved to null`: When evaluating the EL expression, JSF finds no setter method for the bean name with the identifier mentioned in the error message. Indeed, the rule for a JavaBean requires that the method be correctly named, and since we have changed its name, JSF considers that there is no setter method. It therefore logically warns us that an exception `javax.el.el.PropertyNotWritableException` is thrown, and that the name property is considered to be read-only.
+3. `unable to find matching navigation case with from-view-id '/mypage.xhtml' for action 'connexion' with outcome 'connexion'`: The JSF controller - the FacesServlet - is unable to find a Facelet named `mypage.xhtml`, and JSF automatically displays the error, directly within your page! To fix it, you have to make sure that `mypage.xhtml` is available in the appropriate path.
 
 
 
@@ -132,7 +166,9 @@ _https://jcp.org/en/introduction/faq_
 
 # Exercises
 
-1. Create a simple landing page using JSP. The page should contains a header, a content div and a footer
-2. Add a form: the purpose of our project is to create a new user (first name, last name, email address, password)
-3. Persist the newly created user in a H2 database
+1. Create a simple landing page using JSF. The page should contains a header, a content div and a footer
+2. Create a new Bean (BankAccount)
+3. Add views containing forms: the purpose of our project is to create a new bank account.
+4. Persist the newly created Bank Account in a H2 database
+5. Handle transactions between Bank accounts (deposit and transfer).
 
