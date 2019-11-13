@@ -31,11 +31,11 @@ JavaServer Pages (JSP) is a collection of technologies that helps software devel
 In this section, we will make an overview of Servlets, data transmission (using POST and GET) and JavaServer Pages.
 1. Create a servlet: Right click on the servlet's package (com.mycompany.servlets) > New > Servlet. In the dialog box, give a name to your servlet (`controllerServlet`), click on `Next`. On the next page, check the box `Add information to deployment descriptor`
 
-<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/createServlet1.png?raw=True" height="150" alt="Packages">
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/createServlet1.png?raw=True" alt="Packages">
 
 Looking at the generated code for the new `ControllerServlet`, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon ( Code fold icon ) in the editor's left margin to view these methods.) Because this application differentiates between doGet and doPost, you'll add code directly to these methods and remove the processRequest method altogether.
 
-1. 
+
 
 ## JavaServer Faces
 
