@@ -11,12 +11,25 @@
 To introduce the principle of JSP and JSF, we will create a simple web project using these technologies.
 We will create our project using Netbeans and we will deploy it on a Payara server.
 
-The goal of this project is to create a simple page containing a form. We will use this form to register employees.
-Each employee should have an First name, last name and a position.
+The goal of this exercise session is to make an overview of JSP and JSF technologies. We will explore Servlets, JSP and JSF. 
+
+Using JSF, we will create a simple page containing a form. We will use this form to register employees.
+Each employee should have a first name, last name and a position.
+
+To create our project using Netbeans, we will follow the steps below:
+1. Open Netbeans
+2. Create a New Project (File > New Project > Java with Maven > Web Application)
+3. Let's call it "Sample_JSF", click on _Finish_. Your project is ready!
+4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will two different packages:
+   - Beans (com.mycompany.beans)
+   - Servlets (com.mycompany.servlets)
+
+<img src="">
 
 ## JavaServer Page
 JavaServer Pages (JSP) is a collection of technologies that helps software developers create dynamically generated web pages based on HTML, XML, SOAP, or other document types.
-In this section, we will create a simple page using JSP
+In this section, we will create a simple page using JSP.
+In this section, we will make an overview of Servlets, data transmission (using POST and GET) and JavaServer Pages.
 
 ## JavaServer Faces
 
@@ -24,18 +37,12 @@ In this section, we will create a simple page using JSP
 
 JSF is based on the Model-View-Controller (MVC) Pattern.
 
-To create our project using Netbeans, we will follow the steps below:
-1. Open Netbeans
-2. Create a New Project (File > New Project > Java with Maven > Web Application)
-3. Let's call it "Sample_JSF", click on _Finish_. Your project is ready!
-4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will only need one package:
-   - Beans (com.mycompany.beans)
-
-5. Now, we can create our bean. It will contain the properties of our employees (First name, last name, position). To create a new bean, we have to right click on the bean package(com.mycompany.beans) and click on _New > Other > JavaServer Faces > JSF CDI Bean_.
+To build our project using JSF, we have to follow the steps below:
+   
+1. In our project, we have to create a bean containing the properties of our employees (First name, last name, position). To create a new bean, we have to right click on the bean package(com.mycompany.beans) and click on _New > Other > JavaServer Faces > JSF CDI Bean_.
    We will call it _EmployeeBean_
 
-
-6. Once the bean is created, we have to add the annotations `@Named(value = "employeeBean")` from `javax.inject.Named` and `@RequestScoped` from `javax.enterprise.context.RequestScoped`, then we have to add the attributes of _Employee_ and generate the Getters and Setters.
+2. Once the bean is created, we have to add the annotations `@Named(value = "employeeBean")` from `javax.inject.Named` and `@RequestScoped` from `javax.enterprise.context.RequestScoped`, then we have to add the attributes of _Employee_ and generate the Getters and Setters.
    Each employee should have the following attributes:
    ```JAVA
    private String firstName, lastname, position;
@@ -50,7 +57,7 @@ To create our project using Netbeans, we will follow the steps below:
 
 **Note: In JSF 2.3, managed bean annotations are deprecated; CDI is now the preferred approach.**
 
-7. Creating the view: For this project, we will create two Facelets (Facelets are just XHTML pages with JSF tags): createEmployee and welcomeEmployee.
+6. Creating the view: For this project, we will create two Facelets (Facelets are just XHTML pages with JSF tags): createEmployee and welcomeEmployee.
    _createEmployee_ will contains the form to create a new employee.
    _welcomeEmployee_ will show us the attributes defined in our bean.
    
@@ -137,10 +144,10 @@ The JSF runtime searches for a file named `welcomeEmployee`. It assumes the file
 > * Dynamically perform arithmetic, boolean, and string operations.
 > * Dynamically construct collection objects and perform operations on collections
 
-8. Run the project: Run click on `createEmployee.xhtml` > Run File
+7. Run the project: Run click on `createEmployee.xhtml` > Run File
    
 
- ## Recurrent issue:
+ ## Recurrent issues:
 1. Unable to find resource ./css/default.css: To fix it, remove "./" on your resources path.
 The new *h* tag should look like this:  `<h:outputStylesheet name="resources/css/default.css"/>`
 2. `... Target Unreachable, identifier 'bean' resolved to null`: When evaluating the EL expression, JSF finds no setter method for the bean name with the identifier mentioned in the error message. Indeed, the rule for a JavaBean requires that the method be correctly named, and since we have changed its name, JSF considers that there is no setter method. It therefore logically warns us that an exception `javax.el.el.PropertyNotWritableException` is thrown, and that the name property is considered to be read-only.
