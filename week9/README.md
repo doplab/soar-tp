@@ -33,7 +33,7 @@ In this section, we will make an overview of Servlets, data transmission (using 
 
 <img src="https://github.com/doplab/soar-tp/blob/master/week9/images/createServlet1.png?raw=True" alt="Packages">
 
-Looking at the generated code for the new `ControllerServlet`, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon ( Code fold icon ) in the editor's left margin to view these methods.) Because this application differentiates between doGet and doPost, you'll add code directly to these methods and remove the processRequest method altogether.
+Looking at the generated code for the new `ControllerServlet`, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon in the editor's left margin to view these methods.) Because this application differentiates between _doGet_ and _doPost_, we will add code directly to these methods and remove the processRequest method altogether.
 
 
 
