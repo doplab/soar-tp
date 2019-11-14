@@ -42,33 +42,52 @@ In this section, we will make an overview of Servlets, data transmission (using 
       </form>
       ```
 
-2. We will create an EJB to handle the transactions. It will contain all basic method to create a new bank account. 
-   To create a new Stateless EJB, Right click on the package containing our beans (com.mycompany.beans) > New > Session Bean
-
-   The Stateless Bean will contain the same attributes as described above: _lastname_ and _firstname_. Our EJB should have the following methods (Getters and Setters):
-   ```Java
-   public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    ```
-   
-3. Create a servlet: Right click on the servlet's package (com.mycompany.servlets) > New > Servlet. In the dialog box, give a name to your servlet (`insert`), click on `Next`. On the next page, check the box `Add information to deployment descriptor`
+2. Create a servlet: Right click on the servlet's package (com.mycompany.servlets) > New > Servlet. In the dialog box, give a name to your servlet (`insert`), click on `Next`. On the next page, check the box `Add information to deployment descriptor`
 
 <img src="https://github.com/doplab/soar-tp/blob/master/week9/images/createServlet1.png?raw=True" alt="Packages">
 
-Looking at the generated code for the new `insert`, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon in the editor's left margin to view these methods.) Because this application differentiates between _doGet_ and _doPost_, we will add code directly to these methods and remove the processRequest method altogether.
+Looking at the generated code for the new `insert` servlet, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon in the editor's left margin to view these methods.) Because this application differentiates between _doGet_ and _doPost_, we will add code directly to these methods and remove the processRequest method altogether.
+
+In the `doPost` method, we will get the parameters of the form. To do it, we have to invoke the method `.getParameter("parameter name")` of request. Then we will provide these parameters to _accountDetails.jsp_ by using a `RequestDispatcher`.
+
+Our code should look like this:
+```java
+@Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        RequestDispatcher rd = request.getRequestDispatcher("/accountDetails.jsp");
+        String firstname = request.getParameter("firstname");
+        String lastname = request.getParameter("lastname");
+        
+        request.setAttribute("firstname", firstname);
+        request.setAttribute("lastname", lastname);
+     
+        rd.forward(request, response);
+    }
+```
+The method `rd.forward(request, response)` will redirect us to `accountDetails.jsp` with the defined attributes (`firstname` and `lastname`).
+
+1. Get the attributes: In `accountDetails.jsp`, we will show a simple message containing in the attributes mentionned above. To get these attributes, we can use `request.getParameter("_Attribute name_")` or an EL `${param.firstname}`.
+
+Our JSP file should look like this:
+```html
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Confirmation message</title>
+    </head>
+    <body>
+        <h1>Welcome ${param.firstname} ${param.lastname}</h1>
+    </body>
+</html>
+```
+
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/result.png?raw=True" alt="Packages">
+
+
 
 
 
