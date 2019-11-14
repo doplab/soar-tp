@@ -63,11 +63,12 @@ To build our project using JSF, we have to follow the steps below:
 
 **Note: In JSF 2.3, managed bean annotations are deprecated; CDI is now the preferred approach.**
 
-6. Creating the view: For this project, we will create two Facelets (Facelets are just XHTML pages with JSF tags): createEmployee and welcomeEmployee.
+6. Creating the view: For this project, we will create two Facelets (Facelets are just XHTML pages with JSF tags): _createEmployee_ and _welcomeEmployee_.
    _createEmployee_ will contains the form to create a new employee.
    _welcomeEmployee_ will show us the attributes defined in our bean.
    
-   Netbeans makes it easy for us to create facelets by allowing us to use pre-designed templates
+   Netbeans makes it easy for us to create facelets by allowing us to use pre-designed templates.
+   
    To create a new Facelet based on a defined template, we have to Right click on _Web Pages_> New > Other > JavaServer Faces > Facelets Template
    Name your template and select a Layout style, then click on Finish.
    Create the two facelets: _createEmployee_ and _welcomeEmployee_
