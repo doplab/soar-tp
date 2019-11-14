@@ -240,3 +240,44 @@ _https://jcp.org/en/introduction/faq_
 4. Persist the newly created Bank Account in a H2 database
 5. Handle transactions between Bank accounts (deposit and transfer).
 
+
+# Oracle VM VirtualBox 
+
+## Download Oracle VM VirtualBox 
+
+1. Go to the following link: 
+https://www.virtualbox.org/wiki/Downloads 
+
+2.	Download Oracle VM VirtualBox (choose your OS): 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/1.png" height="150" alt="Packages"> 
+
+## How to use Oracle VM VirtualBox 
+
+Once you installed the application, all you need to do is to Import the OVA file (download the file here). 
+
+1.	Click on **Import** 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/2.PNG" height="150" alt="Packages"> 
+
+2.	Select the OVA file 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/3.png" height="150" alt="Packages"> 
+
+3.	Don’t change anything and click on **Import** 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/4.png" height="150" alt="Packages"> 
+
+
+## Important Information About the VM 
+Username:	soar 
+Password:	1234 
+
+## How to set RAM of the virtual machine 
+1.	Click on **Settings** 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/5.png" height="150" alt="Packages"> 
+
+2.	Click on **Systems** 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/6.png" height="150" alt="Packages"> 
+
+3.	Set the RAM (Base Memory) as you wish. 
+But make sure 
+-	you have at least 4GB of RAM (Base Memory is at least 4096) 
+-	the selector is always in green part 
+-	the value must be at least 2048, which is also the default, and should be represented as 2 to the power X (you can set it to 2048, 4096, 8192, and so on). 
