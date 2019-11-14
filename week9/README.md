@@ -259,10 +259,10 @@ Once you installed the application, all you need to do is to Import the OVA file
 <img src="https://github.com/doplab/soar-tp/blob/master/week9/images/2.PNG" height="150" alt="Packages"> 
 
 2.	Select the OVA file 
-<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/3.png" height="150" alt="Packages"> 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/3.png" height="450" alt="Packages"> 
 
 3.	Don’t change anything and click on **Import** 
-<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/4.png" height="150" alt="Packages"> 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/4.png" height="450" alt="Packages"> 
 
 
 ## Important Information About the VM 
@@ -271,10 +271,10 @@ Password:	1234
 
 ## How to set RAM of the virtual machine 
 1.	Click on **Settings** 
-<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/5.png" height="150" alt="Packages"> 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/5.png" height="450" alt="Packages"> 
 
 2.	Click on **Systems** 
-<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/6.png" height="150" alt="Packages"> 
+<img src="https://github.com/doplab/soar-tp/blob/master/week9/images/6.png" height="450" alt="Packages"> 
 
 3.	Set the RAM (Base Memory) as you wish. 
 But make sure 
