@@ -153,7 +153,7 @@ The JSF runtime searches for a file named `welcomeEmployee`. It assumes the file
 7. Run the project: Run click on `createEmployee.xhtml` > Run File
    
 
- ## Recurrent issues:
+ ## Common errors:
 1. Unable to find resource ./css/default.css: To fix it, remove "./" on your resources path.
 The new *h* tag should look like this:  `<h:outputStylesheet name="resources/css/default.css"/>`
 2. `... Target Unreachable, identifier 'bean' resolved to null`: When evaluating the EL expression, JSF finds no setter method for the bean name with the identifier mentioned in the error message. Indeed, the rule for a JavaBean requires that the method be correctly named, and since we have changed its name, JSF considers that there is no setter method. It therefore logically warns us that an exception `javax.el.el.PropertyNotWritableException` is thrown, and that the name property is considered to be read-only.
