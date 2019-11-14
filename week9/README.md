@@ -180,7 +180,7 @@ _https://jcp.org/en/introduction/faq_
 
 # Exercises
 
-1. Create a simple landing page using JSF. The page should contains a header, a content div and a footer
+1. Create a simple landing page using JSF. The page must contain a header, a content div and a footer
 2. Create a new Bean (BankAccount)
 3. Add views containing forms: the purpose of our project is to create a new bank account.
 4. Persist the newly created Bank Account in a H2 database
