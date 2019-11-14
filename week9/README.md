@@ -253,7 +253,7 @@ https://www.virtualbox.org/wiki/Downloads
 
 ## How to use Oracle VM VirtualBox 
 
-Once you installed the application, all you need to do is to Import the OVA file (download the file here). 
+Once you installed the application, all you need to do is to Import the OVA file (download the file [here](https://drive.google.com/open?id=1cGDIpAt-bjz9WtR_iKdz0uQLuzVTOnW8)). 
 
 1.	Click on **Import** 
 <img src="https://github.com/doplab/soar-tp/blob/master/week9/images/2.PNG" height="150" alt="Packages"> 
