@@ -235,10 +235,9 @@ _https://jcp.org/en/introduction/faq_
 # Exercises
 
 1. Create a simple landing page using JSF. The page must contain a header, a content div and a footer
-2. Create a new Bean (BankAccount)
-3. Add views containing forms: the purpose of our project is to create a new bank account.
-4. Persist the newly created Bank Account in a H2 database
-5. Handle transactions between Bank accounts (deposit and transfer).
+2. Add views containing forms: the purpose of our project is to create a new bank account.
+3. Persist the newly created Bank Account in a H2 database ([JPA - Week 7](https://github.com/doplab/soar-tp/blob/master/week7/Week7_presentation.pptx))
+4. Handle transactions between Bank accounts (deposit and transfer).
 
 
 # Oracle VM VirtualBox 
