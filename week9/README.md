@@ -19,8 +19,8 @@ Each employee should have a first name, last name and a position.
 To create our project using Netbeans, we will follow the steps below:
 1. Open Netbeans
 2. Create a New Project (File > New Project > Java with Maven > Web Application)
-3. Let's call it "Sample_JSF", click on _Finish_. Your project is ready!
-4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will two different packages:
+3. Let's call it "SoAr_week9", click on _Finish_. Your project is ready!
+4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will use two different packages:
    - Beans (com.mycompany.beans)
    - Servlets (com.mycompany.servlets)
 
@@ -29,11 +29,46 @@ To create our project using Netbeans, we will follow the steps below:
 ## JavaServer Page
 JavaServer Pages (JSP) is a collection of technologies that helps software developers create dynamically generated web pages based on HTML, XML, SOAP, or other document types.
 In this section, we will make an overview of Servlets, data transmission (using POST and GET) and JavaServer Pages.
-1. Create a servlet: Right click on the servlet's package (com.mycompany.servlets) > New > Servlet. In the dialog box, give a name to your servlet (`controllerServlet`), click on `Next`. On the next page, check the box `Add information to deployment descriptor`
+1. Create the views (JSP): For this section on JSP, we will create two JSP files (A form containing two inputs and a confirmation page).
+   
+   We can see that the IDE automatically generate an index file. We will use it as a landing page. It should contains a link to the form.
+   To create new pages, we have to right-click on our project > New > JSP. We will create two pages called _openAccount_ and _accountDetails_ 
+   _openAccount_ will contain the following form:
+   ```html
+    <form method="post" action="insert">
+       Last Name   <input type="text" name="lastname" value="Simpson"><br>
+       First Name  <input type="text" name="firstname" value="Marge"> <br>
+         <input type="submit" name="action" value="Create a new Account">
+      </form>
+      ```
+
+2. We will create an EJB to handle the transactions. It will contain all basic method to create a new bank account. 
+   To create a new Stateless EJB, Right click on the package containing our beans (com.mycompany.beans) > New > Session Bean
+
+   The Stateless Bean will contain the same attributes as described above: _lastname_ and _firstname_. Our EJB should have the following methods (Getters and Setters):
+   ```Java
+   public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    ```
+   
+3. Create a servlet: Right click on the servlet's package (com.mycompany.servlets) > New > Servlet. In the dialog box, give a name to your servlet (`insert`), click on `Next`. On the next page, check the box `Add information to deployment descriptor`
 
 <img src="https://github.com/doplab/soar-tp/blob/master/week9/images/createServlet1.png?raw=True" alt="Packages">
 
-Looking at the generated code for the new `ControllerServlet`, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon in the editor's left margin to view these methods.) Because this application differentiates between _doGet_ and _doPost_, we will add code directly to these methods and remove the processRequest method altogether.
+Looking at the generated code for the new `insert`, you can see that the IDE's servlet template employs a processRequest method which is called by both doGet and doPost methods. (You may need to expand the code fold by clicking the plus icon in the editor's left margin to view these methods.) Because this application differentiates between _doGet_ and _doPost_, we will add code directly to these methods and remove the processRequest method altogether.
 
 
 
