@@ -205,7 +205,7 @@ The JSF runtime searches for a file named `welcomeEmployee`. It assumes the file
 > * Dynamically perform arithmetic, boolean, and string operations.
 > * Dynamically construct collection objects and perform operations on collections
 
-7. Run the project: Run click on `createEmployee.xhtml` > Run File
+7. Run the project: Right click on `createEmployee.xhtml` > Run File
    
 
  ## Common errors:
