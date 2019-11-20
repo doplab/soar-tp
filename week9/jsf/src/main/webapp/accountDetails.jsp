@@ -12,6 +12,14 @@
         <title>Confirmation message</title>
     </head>
     <body>
-        <h1>Welcome ${param.firstname} ${param.lastname}</h1>
+        <h1>Welcome 
+            
+            <%
+                String firstname = request.getParameter("firstname");
+                
+out.print(firstname);
+                
+            %>
+            ${param.firstname} ${param.lastname}</h1>
     </body>
 </html>
