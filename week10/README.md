@@ -38,14 +38,19 @@ Now, we can add the additional methods and mention their role through annotation
 > https://docs.oracle.com/javaee/7/api/javax/websocket/Endpoint.html
 
 The required annotations for our project are the following:
-- @serverEndpoint: 
+- @serverEndpoint: This class level annotation declares that the class it decorates is a web socket endpoint that will be deployed and made available in the URI-space of a web socket server. The annotation allows the developer to define the URL (or URI template) which this endpoint will be published, and other important properties of the endpoint to the websocket runtime, such as the encoders it uses to send messages.
+  
 - @OnOpen: is used to annotate a method which will be called after WebSocket connection in opened. The method linked to this annotation takes two parameters: 
   - Session: the session that has just been activated
   - EndpointConfig(optional): the configuration used to configure the endpoint
+  
 - @OnClose: this method is called immediately prior to the session with the remote peer being closed. It is called whether the session is being closed because the remote peer initiated a close and sent a close frame, or whether the local websocket container or this endpoint requests to close the session. The method linked to this annotation takes two parameters:
   - Session: the session about to be closed
   - closeReason: the reason the session was closed.
+
 - @OnMessage: this method level annotation can be used to make a Java method receive incoming web socket messages. 
+  
+- @OnError: A method with @OnError is invoked when there is a problem with the communication
 
 ## Client
 
