@@ -16,7 +16,7 @@
 2.1. A private instance variable called __executor__ and initialize it with **Executors.newSingleThreadExecutor()**    
 2.2. A public method called __calculateFactorial__, which takes a parameter called **number** (is type of Integer). The method returns a value which is a type of __Future\<Integer\>__.    
 2.3. The body of the method should be as follows:    
-````
+```java
 return executor.submit(() -> {    
     Thread.sleep(1000);    
     int fact = 1;    
@@ -25,12 +25,12 @@ return executor.submit(() -> {
     }    
     return fact;    
 });    
-````
+```
 
 3. In the main method, create a __FactorialFuture__ object. Declare at least 2 **Future\<Integer\>** variables and initialize them by calling __calculateFactorial__ method of **FactorialFuture** class.
 
 4. Implement the following simple algorithm.
-````
+```java
 f1,f2 <- Future<Integer>
 while f1 and f2 are not done
     if f1.isDone then print "F1 is done"
@@ -42,7 +42,7 @@ result1 <- f1.get
 result2 <- f2.get
 print result1 and result2
 System.exit(0) // add this line as it is
-````
+```
 
 5. Import statements should be as follows:
 5.1. In class __FactorialFuture__
@@ -61,7 +61,7 @@ System.exit(0) // add this line as it is
 # Sockets
 
 In this exercise, we will create two applications that communicate with each other via sockets. One of them will act as a server and the other as a client.
-The server will contain a list of words and their translation (EN / FR). The client will send a request to the server with as parameter a word to translate. The server will check if the word exists in the dictionary, if it is, it will return the translated word, otherwise it will return a custom message.
+The server will contain a list of words and their translation (EN / FR). The client will send a request to the server with a word to translate. The server will check if the word exists in the dictionary, if it is, it will return the translated word, otherwise it will return a custom message.
 
 ## Server
 The instructions to run the server will be made in the main method of our java application.
