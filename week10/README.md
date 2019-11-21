@@ -8,57 +8,7 @@
 4. Web socket API
 
 
-# Asynchronous methods
-
-# Web sockets
-
-Web socket provides a persistent connection between a client and a server. It's an alternative to the limitation of efficient communication between the server and the web browser. It works on the underlying TCP/IP connections and provides **bi-directional**, **full-duplex**, **low-latency** and **real-time** client/server communications.
-
-The Expert Group that defined the Java API for websocket (JSR) 356 wanted to support patterns and techniques that are common to Java EE developers. As a consequence, JSR 356 leverages annotations and injection.
-
-In this exercise session, we will create a real-time chat web application based on the Java API for Websockets.
-Through our messaging system, everybody will be able to login an post messages in real-time.
-
-To create our project using Netbeans, we will follow the steps below:
-1. Open Netbeans
-2. Create a New Project (File > New Project > Java with Maven > Web Application)
-3. Let's call it "SoAr_sockets_week10", click on _Finish_. Your project is ready!
-4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will use two different packages:
-   - Server (com.mycompany.server)
-   - Client (com.mycompany.client)
-
-## Server
-The server Endpoint will consist in a simple POJO (Plain Old Java Object) with the adequate annotations. To create the server Endpoint, we have to add a new class to our project. Luckily, Netbeans allows us to generate new Endpoints. To do it, we have to Right click on our project > New > Other > Web > WebSocket Endpoint
-
-<img src="https://github.com/doplab/soar-tp/blob/master/week10/images/endpoint.png?raw=True" alt="ServerEndPoint">
-
-Now, we can add the additional methods and mention their role through annotations
-
->The Web Socket Endpoint represents an object that can handle websocket conversations. Developers may extend this class in order to implement a programmatic websocket endpoint. The Endpoint class holds lifecycle methods that may be overridden to intercept websocket open, error and close events.
-> https://docs.oracle.com/javaee/7/api/javax/websocket/Endpoint.html
-
-The required annotations for our project are the following:
-- @serverEndpoint: This class level annotation declares that the class it decorates is a web socket endpoint that will be deployed and made available in the URI-space of a web socket server. The annotation allows the developer to define the URL (or URI template) which this endpoint will be published, and other important properties of the endpoint to the websocket runtime, such as the encoders it uses to send messages.
-  
-- @OnOpen: is used to annotate a method which will be called after WebSocket connection in opened. The method linked to this annotation takes two parameters: 
-  - Session: the session that has just been activated
-  - EndpointConfig(optional): the configuration used to configure the endpoint
-  
-- @OnClose: this method is called immediately prior to the session with the remote peer being closed. It is called whether the session is being closed because the remote peer initiated a close and sent a close frame, or whether the local websocket container or this endpoint requests to close the session. The method linked to this annotation takes two parameters:
-  - Session: the session about to be closed
-  - closeReason: the reason the session was closed.
-
-- @OnMessage: this method level annotation can be used to make a Java method receive incoming web socket messages. 
-  
-- @OnError: A method with @OnError is invoked when there is a problem with the communication
-
-## Client
-
-# JMS
-
-
-
-# Future Exercise
+# Asynchronous methods - Future Exercise
 
 1. Create a new Java application.    
 
@@ -106,3 +56,117 @@ System.exit(0) // add this line as it is
 6. Don't forget to add catch/throw statements when it's needed.
 
 7. RUN your code!
+
+
+# Sockets
+
+In this exercise, we will create two applications that communicate with each other via sockets. One of them will act as a server and the other as a client.
+The server will contain a list of words and their translation (EN / FR). The client will send a request to the server with as parameter a word to translate. The server will check if the word exists in the dictionary, if it is, it will return the translated word, otherwise it will return a custom message.
+
+## Server
+The instructions to run the server will be made in the main method of our java application.
+
+To create our project using Netbeans, we will follow the steps below:
+1. Open Netbeans
+2. Create a New Project (File > New Project > Java with Maven > Java Application)
+3. Let's call it "DictionaryServer", click on _Finish_. Your project is ready!
+4. Create a new Java class (`Server`)
+5. Add a `main` method to the newly created class. 
+Your file should look like this:
+```java
+package com.mycompany.server;
+
+public class Server {
+    public static void main(String[] args) {
+        
+    }
+    
+}
+```
+In the main method, create a Hashmap containing all the words you want to translate:
+```java
+HashMap<String, String> dico = new HashMap<String, String>();
+dico.put("inheritance", "héritage");
+dico.put("distributed", "réparti");
+```
+Now, let's set up our server!
+The first thing to do is to declare a serverSocket and define a port:
+```java
+ServerSocket connectionServer = new ServerSocket(4444);
+```
+> A server socket waits for requests to come in over the network. It performs some operation based on that
+> request, and then possibly returns a result to the requester.
+
+When defining a port number, we should avoid using the well-known ports (Port Number 0 to 1023). More details on well known ports: http://www.meridianoutpost.com/resources/articles/well-known-tcpip-ports.php
+
+When the connection server is declared and assigned with a port number, the server just waits, listening to the socket for a client to make a connection request.
+In order to accept a connection, we need to define a new client socket and bound it to the same port that the Server Socket:
+```java
+clientSession = connectionServer.accept();
+```
+At this point, the new Socket object puts the server in direct connection with the client.
+The next step is to prepare the server to accept input from the client and to send back an output. To do, we will use a `PrintWriter` to send the message and `BufferedReader` to read the incoming messages.
+```java
+out = new PrintWriter(clientSession.getOutputStream(), true);
+in = new BufferedReader(new InputStreamReader(clientSession.getInputStream()));
+```
+Now we can do the operations and **close the connections**.
+```java
+String word, mot;
+
+            while ((word = in.readLine()) != null) {
+                mot = (String) dico.get(word);
+                
+                if (mot == null) {
+                    mot = "sorry, no translation available for \"" + word + "\" !";
+                }
+                out.println(mot);
+            }
+            out.close();
+            in.close();
+            connectionServer.close();
+            clientSession.close();
+```
+
+
+## Client
+
+For the client, we will create a new project by following the same steps as when creating the server.
+In the main method, we will follow the steps required to connect and to make requests to the server.
+
+The first step is to create a new `Socket` with the information of the server (IP and port number):
+```java
+Socket mySession = new Socket("127.0.0.1", 4444);
+```
+This constructor only creates a new socket when the server has accepted the connection, otherwise, we will get a connection refused exception. That's the reason why, it's recommended to handle the exceptions by surrounding your code with `try..catch()` instructions. More details here: https://docs.oracle.com/javase/tutorial/essential/exceptions/catch.html
+
+Once the connection is established between the client and the server, we can start the communication by setting up the input and output streams:
+```java
+out = new PrintWriter(mySession.getOutputStream(), true);
+in = new BufferedReader(new InputStreamReader(mySession.getInputStream()));
+```
+The input stream of the client is connected to the output stream of the server, just like the input stream of the server is connected to the output stream of the client.
+
+Now we can make our operations. As a reminder, we have to send an input to the server and wait for a result. This input will be a word (`String`), the server checks if the word exists in its dictionary and returns the translation.
+We can use the code below to request an input from the user, send it to the server and listen to its response:
+```java
+stdIn = new BufferedReader(new InputStreamReader(System.in));
+String fromServer, fromUser;
+
+System.out.println("Go on, ask the dictionary server!");
+while (!(fromUser = stdIn.readLine()).equals("quit")) {
+    out.println(fromUser);
+    fromServer = in.readLine();
+    System.out.println("-> " + fromServer);
+            }
+```
+Don't forget to close the opened connections!
+```java
+out.close();
+in.close();
+stdIn.close();
+mySession.close();
+```
+
+# More resources
+## Datagram Socket using UDP
