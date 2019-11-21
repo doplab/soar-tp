@@ -55,3 +55,54 @@ The required annotations for our project are the following:
 ## Client
 
 # JMS
+
+
+
+# Future Exercise
+
+1. Create a new Java application.    
+
+2. Create a class called **FactorialFuture**. Add followings:    
+2.1. A private instance variable called __executor__ and initialize it with **Executors.newSingleThreadExecutor()**    
+2.2. A public method called __calculateFactorial__, which takes a parameter called **number** (is type of Integer). The method returns a value which is a type of __Future\<Integer\>__.    
+2.3. The body of the method should be as follows:    
+````
+return executor.submit(() -> {    
+    Thread.sleep(1000);    
+    int fact = 1;    
+    for (int i = 1; i <= number; i++) {    
+        fact *= i;    
+    }    
+    return fact;    
+});    
+````
+
+3. In the main method, create a __FactorialFuture__ object. Declare at least 2 **Future\<Integer\>** variables and initialize them by calling __calculateFactorial__ method of **FactorialFuture** class.
+
+4. Implement the following simple algorithm.
+````
+f1,f2 <- Future<Integer>
+while f1 and f2 are not done
+    if f1.isDone then print "F1 is done"
+    else print "F1 is not done"
+    if f2.isDone then print "F2 is done"
+    else print "F2 is not done"
+    Thread.sleep(300) // add this line as it is
+result1 <- f1.get
+result2 <- f2.get
+print result1 and result2
+System.exit(0) // add this line as it is
+````
+
+5. Import statements should be as follows:
+5.1. In class __FactorialFuture__
+- java.util.concurrent.ExecutorService
+- java.util.concurrent.Executors
+- java.util.concurrent.Future
+5.2. In the **MainClass**
+- java.util.concurrent.ExecutionException
+- java.util.concurrent.Future
+
+6. Don't forget to add catch/throw statements when it's needed.
+
+7. RUN your code!
