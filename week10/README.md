@@ -5,7 +5,6 @@
 1. Netbeans 11
 2. Java Development Kit 8
 3. Payara Server
-4. Web socket API
 
 
 # Asynchronous methods - Future Exercise
@@ -60,8 +59,7 @@ System.exit(0) // add this line as it is
 
 # Sockets
 
-In this exercise, we will create two applications that communicate with each other via sockets. One of them will act as a server and the other as a client.
-The server will contain a list of words and their translation (EN / FR). The client will send a request to the server with a word to translate. The server will check if the word exists in the dictionary, if it is, it will return the translated word, otherwise it will return a custom message.
+In this exercise, we will create two applications that communicate with each other via sockets. One of them will act as a server and the other as a client. The server will contain a list of words and their translation (EN / FR). The client will send a request to the server with a word to translate. The server will check if the word exists in the dictionary, if it exists, it should return the translated word, otherwise it should return a custom message.
 
 ## Server
 The instructions to run the server will be made in the main method of our java application.
