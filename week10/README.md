@@ -168,5 +168,6 @@ stdIn.close();
 mySession.close();
 ```
 
-# More resources
-## Datagram Socket using UDP
+# Additional resources
+1. Datagram Socket using UDP: https://github.com/doplab/soar-tp/tree/master/week10/UDP_socket
+2. UDP Multicast: https://github.com/doplab/soar-tp/tree/master/week10/UDP_Multicast
