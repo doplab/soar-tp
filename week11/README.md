@@ -63,11 +63,56 @@ For this exercise session, we will use Javascript to create a WebSocket client. 
 </figure>
 
 <figure>
-<img src="https://github.com/doplab/soar-tp/blob/master/week11/images/chatroom.png?raw=True" alt="Homepage">
+<img src="https://github.com/doplab/soar-tp/blob/master/week11/images/chatroom.png?raw=True" alt="Chatroom">
 <figcaption>Chatroom</figcaption>
 </figure>
 
 To create the JSP pages and the servlet, you can refer to the [instructions of week 9](https://github.com/doplab/soar-tp/tree/master/week9).
+You can find on this [link](https://github.com/doplab/soar-tp/blob/master/week11/SOAR_chat/src/main/webapp/chat.jsp) a sample web page for our chatroom.
+
+Now, we can focus on the WebSocket client (written in Javascript). We have to create a new Javascript file and link it to our JSP by using the following code: 
+```javascript
+ <script src="${pageContext.request.contextPath}/js/main.js"></script>
+```
+The Javascript file will be used to :
+- Map the WebSocket server endpoint to the URI defined, in our case, it should be `ws://localhost:8080/<project-name>/<server-EndPoint>`.
+- Capture the event of sending a new message and transfer the message to the server
+- Update the UI according to incoming messages.
+
+```Javascript
+//Connection the server
+var webSocket = new WebSocket('ws://localhost:8080/<project-name>/<server-EndPoint>');
+
+// Triggers an action when the user clicks on the "Send button"
+    $("#btn-chat").click(function(){
+        var message = $("#message_input").val();
+        //Encode the message in a JSON format
+        message = JSON.stringify({
+            name: name,
+            message: message,
+            avatar: avatar
+        });
+        webSocket.send(message);
+    });
+    
+    //Triggered when there is a new message from the server
+    webSocket.onmessage = function (event) {
+        onMessage(event);
+    };
+
+    function onMessage(event) {
+      var incoming_message = JSON.parse(event.data);
+      updateUI(incoming_message);
+    }
+
+    //Method used to update the User Interface
+    function updateUI(message){
+        //Decode the JSON
+        name = message.name;
+        message = message.message;
+        alert("New message from"+name+": "+message);
+
+    }
 
 
 # JMS 
