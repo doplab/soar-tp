@@ -17,13 +17,13 @@ Web socket provides a persistent connection between a client and a server. It's 
 The Expert Group that defined the Java API for websocket (JSR) 356 wanted to support patterns and techniques that are common to Java EE developers. As a consequence, JSR 356 leverages annotations and injection.
 
 In this exercise session, we will create a real-time chat web application based on the Java API for Websockets.
-Through our messaging system, everybody will be able to login an post messages in real-time.
+Through our messaging system, everybody will be able to log in and post messages in real-time.
 
 To create our project using Netbeans, we will follow the steps below:
 1. Open Netbeans
 2. Create a New Project (File > New Project > Java with Maven > Web Application)
-3. Let's call it "SoAr_sockets_week11", click on _Finish_. Your project is ready!
-4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will use two different packages:
+3. Let's call it "SoAr_sockets_week11", click on _Finish_. Our project is ready!
+4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of into packages. For this project, we will use two different packages:
    - Server (com.mycompany.server)
    - Client (com.mycompany.client)
 
@@ -34,11 +34,11 @@ The server Endpoint will consist in a simple POJO (Plain Old Java Object) with t
 
 Now, we can add the additional methods and mention their role through annotations
 
->The Web Socket Endpoint represents an object that can handle websocket conversations. Developers may extend this class in order to implement a programmatic websocket endpoint. The Endpoint class holds lifecycle methods that may be overridden to intercept websocket open, error and close events.
+>The Web Socket Endpoint represents an object that can handle websocket conversations. Developers may extend this class in order to implement a programmatic WebSocket endpoint. The Endpoint class holds lifecycle methods that may be overridden to intercept websocket open, error and close events.
 > https://docs.oracle.com/javaee/7/api/javax/websocket/Endpoint.html
 
 The required annotations for our project are the following:
-- @serverEndpoint: This class level annotation declares that the class it decorates is a web socket endpoint that will be deployed and made available in the URI-space of a web socket server. The annotation allows the developer to define the URL (or URI template) which this endpoint will be published, and other important properties of the endpoint to the websocket runtime, such as the encoders it uses to send messages.
+- @serverEndpoint: This class level annotation declares that the class it decorates is a WebSocket endpoint that will be deployed and made available in the URI-space of a WebSocket server. The annotation allows the developer to define the URL (or URI template) which this endpoint will be published, and other important properties of the endpoint to the websocket runtime, such as the encoders it uses to send messages.
   
 - @OnOpen: is used to annotate a method which will be called after WebSocket connection in opened. The method linked to this annotation takes two parameters: 
   - Session: the session that has just been activated
@@ -48,12 +48,14 @@ The required annotations for our project are the following:
   - Session: the session about to be closed
   - closeReason: the reason the session was closed.
 
-- @OnMessage: this method level annotation can be used to make a Java method receive incoming web socket messages. 
+- @OnMessage: this method-level annotation can be used for a Java method to receive incoming WebSocket messages. 
   
-- @OnError: A method with @OnError is invoked when there is a problem with the communication
+- @OnError: a method with @OnError is invoked when there is a problem with the communication
 
 ## Client
 
+To communicate with the WebSocket server, the client has to initiate the WebSocket connection by sending an HTTP request to a server. This is called the *Handshake phase*. Except for this phase, the WebSocket protocol is totally independent from _HTTP_.
+For this exercise session, we will use Javascript to create a WebSocket client. But first of all, we need to create the User Interface for our chat. To make it simple, we will only create two JSP pages and a servlet.
 
 
 # JMS 
