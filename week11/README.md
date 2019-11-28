@@ -55,12 +55,24 @@ The required annotations for our project are the following:
 ## Client
 
 To communicate with the WebSocket server, the client has to initiate the WebSocket connection by sending an HTTP request to a server. This is called the *Handshake phase*. Except for this phase, the WebSocket protocol is totally independent from _HTTP_.
-For this exercise session, we will use Javascript to create a WebSocket client. But first of all, we need to create the User Interface for our chat. To make it simple, we will only create two JSP pages and a servlet.
+For this exercise session, we will use Javascript to create a WebSocket client. But first of all, we need to create the User Interface for our chat. To make it simple, we will only create two JSP pages and a servlet. The JSP pages will consist of a homepage (registration form) and the chatroom. The homepage should have a form containing 2 form fields: Name and Avatar.
+
+<figure>
+<img src="https://github.com/doplab/soar-tp/blob/master/week11/images/homepage.png?raw=True" alt="Homepage">
+<figcaption>Home page</figcaption>
+</figure>
+
+<figure>
+<img src="https://github.com/doplab/soar-tp/blob/master/week11/images/chatroom.png?raw=True" alt="Homepage">
+<figcaption>Chatroom</figcaption>
+</figure>
+
+To create the JSP pages and the servlet, you can refer to the [instructions of week 9](https://github.com/doplab/soar-tp/tree/master/week9).
 
 
 # JMS 
 
-1. Open **NeatBeans IDE**    
+1. Open **NetBeans IDE**    
 2. Start the __Payara Server__    
 3. Once Payara Server started, right-click on Payara Server and click on **View Domain Admin Console**    
 4. You'll see the __Payara Server Console__ on your browser    
