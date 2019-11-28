@@ -22,7 +22,7 @@ Through our messaging system, everybody will be able to login an post messages i
 To create our project using Netbeans, we will follow the steps below:
 1. Open Netbeans
 2. Create a New Project (File > New Project > Java with Maven > Web Application)
-3. Let's call it "SoAr_sockets_week10", click on _Finish_. Your project is ready!
+3. Let's call it "SoAr_sockets_week11", click on _Finish_. Your project is ready!
 4. Separate our source code into packages. In order to have a better understanding of our code, we will separate each part of our code into packages. For this project, we will use two different packages:
    - Server (com.mycompany.server)
    - Client (com.mycompany.client)
@@ -30,7 +30,7 @@ To create our project using Netbeans, we will follow the steps below:
 ## Server
 The server Endpoint will consist in a simple POJO (Plain Old Java Object) with the adequate annotations. To create the server Endpoint, we have to add a new class to our project. Luckily, Netbeans allows us to generate new Endpoints. To do it, we have to Right click on our project > New > Other > Web > WebSocket Endpoint
 
-<img src="https://github.com/doplab/soar-tp/blob/master/week10/images/endpoint.png?raw=True" alt="ServerEndPoint">
+<img src="https://github.com/doplab/soar-tp/blob/master/week11/images/endpoint.png?raw=True" alt="ServerEndPoint">
 
 Now, we can add the additional methods and mention their role through annotations
 
