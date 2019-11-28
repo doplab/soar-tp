@@ -54,55 +54,59 @@ The required annotations for our project are the following:
 
 ## Client
 
-# JMS
 
 
+# JMS 
 
-# Future Exercise
+1. Open **NeatBeans IDE**    
+2. Start the __Payara Server__    
+3. Once Payara Server started, right-click on Payara Server and click on **View Domain Admin Console**    
+4. You'll see the __Payara Server Console__ on your browser    
+5. Click on **JMS Resource >> Connection Factories >> New**    
+6. Write __jms/MyJMSExerciseConnectionFactory__ to JNDI Name and select **javax.jms.ConnectionFactory** from Resource Type list. Then, just click on OK    
+7. Click on __JMS Resource >> Destination Resources >> New__    
+8. Select **javax.jms.Queue** from Resource Type, write __jms/MyJMSExerciseQueue__ to JNDI Name and **myQueue** to Pyhsical Destination Name. Then, just click on OK    
+9. Create a new __Enterprise Application Client__    
 
-1. Create a new Java application.    
+As you implement a JMS sender and a JMS receiver classes, you will need to import packages. Don't forget to check correct import statements! Here are the import statements you will need:    
 
-2. Create a class called **FactorialFuture**. Add followings:    
-2.1. A private instance variable called __executor__ and initialize it with **Executors.newSingleThreadExecutor()**    
-2.2. A public method called __calculateFactorial__, which takes a parameter called **number** (is type of Integer). The method returns a value which is a type of __Future\<Integer\>__.    
-2.3. The body of the method should be as follows:    
-````
-return executor.submit(() -> {    
-    Thread.sleep(1000);    
-    int fact = 1;    
-    for (int i = 1; i <= number; i++) {    
-        fact *= i;    
-    }    
-    return fact;    
-});    
-````
+For JMSSender.java class    
+- javax.annotation.Resource    
+- javax.jms.ConnectionFactory    
+- javax.jms.JMSProducer    
+- javax.jms.JMSContext    
+- javax.jms.Queue    
 
-3. In the main method, create a __FactorialFuture__ object. Declare at least 2 **Future\<Integer\>** variables and initialize them by calling __calculateFactorial__ method of **FactorialFuture** class.
+For JMSReceiver.java class    
+- javax.annotation.Resource    
+- javax.jms.ConnectionFactory    
+- javax.jms.JMSConsumer    
+- javax.jms.JMSContext    
+- javax.jms.Queue    
 
-4. Implement the following simple algorithm.
-````
-f1,f2 <- Future<Integer>
-while f1 and f2 are not done
-    if f1.isDone then print "F1 is done"
-    else print "F1 is not done"
-    if f2.isDone then print "F2 is done"
-    else print "F2 is not done"
-    Thread.sleep(300) // add this line as it is
-result1 <- f1.get
-result2 <- f2.get
-print result1 and result2
-System.exit(0) // add this line as it is
-````
+## Implementing JMS Sender (**JMSSender.java**)    
+1. Add two private class variables called __connectionFactory__ type of **ConnectionFactory** and __queue_ type of **Queue**    
+2. Add @Resource annotation for the class variable __connectionFactory__, define a mappedName and it's value should be the name of the connection factory (**jms/MyJMSExerciseConnectionFactory**)    
+3. Add @Resource annotation for the class variable __queue__, define a mappedName and it's value should be the name of the queue (**jms/MyJMSExerciseQueue**)    
+4. Write a main method    
+5. Create a local variable called __jmsContext__ (type of **JMSContext**) and initialize it by calling __createContext()__ method of **connectionFactory** instance    
+6. Create a local variable called __jmsProducer__ (type of **JMSProducer**) and initialize it by calling __createProducer()__ method of **jmsContext** instance    
+7. Create a local String variable called __message__ and initialize it as you wish (i.e. "Hello JMS!")    
+8. Tell the user that you're sending a message (Hint: print it!)
+9. Call the **send(...)** method __jmsProducer__ using **queue** and __message__
+10. Tell the user that the message is sent
 
-5. Import statements should be as follows:
-5.1. In class __FactorialFuture__
-- java.util.concurrent.ExecutorService
-- java.util.concurrent.Executors
-- java.util.concurrent.Future
-5.2. In the **MainClass**
-- java.util.concurrent.ExecutionException
-- java.util.concurrent.Future
+# Implementing JMS Receiver (**JMSReceiver.java**)    
+1. Add two private class variables called __connectionFactory__ type of **ConnectionFactory** and __queue_ type of **Queue**    
+2. Add @Resource annotation for the class variable __connectionFactory__, define a mappedName and it's value should be the name of the connection factory (**jms/MyJMSExerciseConnectionFactory**)    
+3. Add @Resource annotation for the class variable __queue__, define a mappedName and it's value should be the name of the queue (**jms/MyJMSExerciseQueue**)    
+4. Write a main method    
+5. Create a local variable called __jmsContext__ (type of **JMSContext**) and initialize it by calling __createContext()__ method of **connectionFactory** instance    
+6. Create a local variable called __jmsConsumer__ (type of **JMSConsumer**) and initialize it by calling __createConsumer__ method of **jmsContext** instance using __queue__    
+7. Tell the user that you're receiving message from JMS    
+8. Create a local String variable called **message** and initialize it by calling __receiveBody(String.class)__ method of **jmsConsumer** instance    
+9. Tell the user that you received the message and show the message    
 
-6. Don't forget to add catch/throw statements when it's needed.
 
-7. RUN your code!
+#### Clean and Build your project, then Run JMSSender and JMSReceiver respectively!    
+
