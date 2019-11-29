@@ -113,7 +113,7 @@ var webSocket = new WebSocket('ws://localhost:8080/<project-name>/<server-EndPoi
         alert("New message from"+name+": "+message);
 
     }
-
+````
 
 # JMS 
 
