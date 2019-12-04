@@ -5,7 +5,6 @@
 1. Netbeans 11
 2. Java Development Kit 8
 3. Payara Server
-4. Web socket API
 
 
 # Asynchronous methods (Transactions)
