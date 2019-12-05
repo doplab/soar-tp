@@ -23,6 +23,17 @@ Luckily, Netbeans facilitates this process. To generate the operation (WebMethod
 As we mentionned above, our newly generated WebMethod will take two inputs (n1 and n2) and return their sum.
 Write the operation in the newly generated WebMethod and return the sum.
 
+To test your web service, start Payara Server (Services > Servers > Payara Server), right click on `SimpleCalculator` and click on `Test Web Service`.
+
+## Client application
+Once the webservice is deployed, we can create a client that will make a request to the Web service and return the result of the addition.
+We can either create a new Java Application or a Web Application. For this exercise session, we will go for a Web Application.
+Create a new Web project called `SimpleCalculatorClient`.
+To create a new WebService client, Right-click on your project > New > Other > Web Services > Web Service Client.
+In the `Project` input, select your project.
+<img src="https://github.com/doplab/soar-tp/blob/master/week12/images/WSclient.png?raw=True" alt="Create a WS Client">
+
+
 
 
 ## Common errors
