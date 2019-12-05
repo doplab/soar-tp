@@ -6,9 +6,6 @@
 2. Java Development Kit 8
 3. Payara Server
 
-
-# Asynchronous methods (Transactions)
-
 # Webservices with JAX-WS
 
 In this exercise, we will create a project that implements webservices using Java API for XML Web Services. In this project, we will deploy the Web Service and create a client which makes a request to our web services and display the result.
@@ -30,8 +27,12 @@ Once the webservice is deployed, we can create a client that will make a request
 We can either create a new Java Application or a Web Application. For this exercise session, we will go for a Web Application.
 Create a new Web project called `SimpleCalculatorClient`.
 To create a new WebService client, Right-click on your project > New > Other > Web Services > Web Service Client.
-In the `Project` input, select your project.
+In the `Project` input, select your project, then click on `Finish`.
 <img src="https://github.com/doplab/soar-tp/blob/master/week12/images/WSclient.png?raw=True" alt="Create a WS Client">
+
+Now, you have to create new Servlet to make a request to the Web Service. You can call it `ClientServlet`
+
+
 
 
 
