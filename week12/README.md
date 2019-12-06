@@ -298,3 +298,7 @@ Run your project!
     ````
 
 13. Run your code!
+
+
+## Exercises
+- Using JAX-RS, write a program that takes a message as input and returns the encoded version using Cesar Cipher (Week 5)
