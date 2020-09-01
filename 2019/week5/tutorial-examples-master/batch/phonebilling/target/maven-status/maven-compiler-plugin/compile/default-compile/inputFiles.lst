@@ -1,0 +1,12 @@
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/BillPartitionMapper.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/items/CallRecord.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/CallRecordReader.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/tools/CallRecordLogCreator.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/beans/JsfBean.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/items/PhoneBill.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/BillReader.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/ItemNumberCheckpoint.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/BillProcessor.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/CallRecordProcessor.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/CallRecordWriter.java
+/Users/garbi/SwitchDrive/Teaching/Courses/Current/Fall/Software Architecture/Code/JavaEE Tutorial/tutorial-examples-master/batch/phonebilling/src/main/java/javaeetutorial/batch/phonebilling/BillWriter.java
