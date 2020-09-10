@@ -9,7 +9,7 @@ We suggest two options:
 2. You can **install the applications** on to your computer. Here is the list of applications and their versions:
     * [JDK 8 (version 8u251)](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
     * [Apache NetBeans (version 12.0)](https://netbeans.apache.org/download/index.html)
-    * Payara Server (5.201) - You should install it inside NetBeans. Instructions are below.
+    * Payara Server (5.201) - You should install it inside NetBeans. The instructions are below.
 
 ### Need a help with the VirtualBox?
 Check [here](https://www.virtualbox.org/manual/UserManual.html) or [VMFAQ.pdf](https://github.com/doplab/SOAR/blob/master/2020/VMFAQ.pdf).
