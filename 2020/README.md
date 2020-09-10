@@ -1,6 +1,6 @@
 # Repository of SOAR 2020
 
-For exercise sessions of the Software Architecture course, we expect you to have some applications installed on your computers since we will not do any installations during exercise sessions.
+We expect you to have some applications installed on your computers for exercise sessions of the Software Architecture course since we will not do any installations during exercise sessions.
 
 We suggest two options:
 1. You can **use a virtual machine** that we prepared for you. The applications you will need this semester is installed and configured for you. You need to install VirtualBox (6.1.12) to run your virtual machine instance.
