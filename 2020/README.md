@@ -5,7 +5,7 @@ We expect you to have some applications installed on your computers for exercise
 We suggest two options:
 1. You can **use a virtual machine** that we prepared for you. The applications you will need this semester is installed and configured for you. You need to install VirtualBox (6.1.12) to run your virtual machine instance.
     * [Download VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-    * [Download virtual machine image](https://drive.google.com/file/d/14AuCug-E9ENhNJzSORQnu13-rwpCuczG/view?usp=sharing)
+    * [Download virtual machine image](https://drive.google.com/file/d/14AuCug-E9ENhNJzSORQnu13-rwpCuczG/view?usp=sharing) All passwords are "1234".
     * How to install VirtualBox on [Windows](https://www.virtualbox.org/manual/UserManual.html#installation_windows), [Mac OS X](https://www.virtualbox.org/manual/UserManual.html#installation-mac), and [Linux](https://www.virtualbox.org/manual/UserManual.html#install-linux-host)?
 2. You can **install the applications** on to your computer. Here is the list of applications and their versions:
     * [JDK 8 (version 8u251)](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
