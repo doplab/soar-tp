@@ -7,6 +7,8 @@
 | Version 3 |  |  |
 
 
+---
+
 We expect you to have some applications installed on your computers for exercise sessions of the Software Architecture course since we will not do any installations during exercise sessions.
 
 We suggest two options:
