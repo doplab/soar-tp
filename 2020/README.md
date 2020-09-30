@@ -1,5 +1,12 @@
 # Repository of SOAR 2020
 
+| Version # | Exercise | Solution |
+|---|---|---|
+| Version 1 | https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w3 |  |
+| Version 2 |  |  |
+|  |  |  |
+
+
 We expect you to have some applications installed on your computers for exercise sessions of the Software Architecture course since we will not do any installations during exercise sessions.
 
 We suggest two options:
