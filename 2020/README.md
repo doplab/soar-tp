@@ -3,7 +3,7 @@
 | Version # | Exercise | Solution |
 |---|---|---|
 | Version 1 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w3) | [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
-| Version 2 |  |  |
+| Version 2 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w4) |  |
 | Version 3 |  |  |
 
 
