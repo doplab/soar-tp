@@ -1,5 +1,7 @@
 package ch.unil.doplab.shoppingwebsite.items;
 
+import java.util.Objects;
+
 /**
  * Software Architectures | DOPLab | UniL
  *
@@ -7,21 +9,14 @@ package ch.unil.doplab.shoppingwebsite.items;
  */
 public class Drink implements Drinkable {
 
-    private int id;
     private String name;
     private double price;
     private boolean hasAcohol;
-    private static int count = 0;
 
     public Drink(String name, double price, boolean hasAcohol) {
-        this.id = ++count;
         this.name = name;
         this.price = price;
         this.hasAcohol = hasAcohol;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getName() {
@@ -47,8 +42,10 @@ public class Drink implements Drinkable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 97 * hash + this.id;
+        int hash = 3;
+        hash = 31 * hash + Objects.hashCode(this.name);
+        hash = 31 * hash + (int) (Double.doubleToLongBits(this.price) ^ (Double.doubleToLongBits(this.price) >>> 32));
+        hash = 31 * hash + (this.hasAcohol ? 1 : 0);
         return hash;
     }
 
@@ -64,7 +61,13 @@ public class Drink implements Drinkable {
             return false;
         }
         final Drink other = (Drink) obj;
-        if (this.id != other.id) {
+        if (Double.doubleToLongBits(this.price) != Double.doubleToLongBits(other.price)) {
+            return false;
+        }
+        if (this.hasAcohol != other.hasAcohol) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         return true;
@@ -72,7 +75,7 @@ public class Drink implements Drinkable {
 
     @Override
     public String toString() {
-        return "Drink{" + "id=" + id + ", name=" + name + ", price=" + price + ", hasAcohol=" + hasAcohol + "}";
+        return "Drink{" + "name=" + name + ", price=" + price + ", hasAcohol=" + hasAcohol + "}";
     }
 
 }
