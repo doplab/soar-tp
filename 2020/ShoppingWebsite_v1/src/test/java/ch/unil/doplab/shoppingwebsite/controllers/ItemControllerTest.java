@@ -236,7 +236,7 @@ public class ItemControllerTest {
         // it should not exist in the shopping cart
         Food expectedFood = null;
         for (Food f : buyer.getShoppingCart().getFoods()) {
-            if (expectedFood.getName().equals(foodName)) {
+            if (f.getName().equals(foodName)) {
                 expectedFood = f;
             }
         }
