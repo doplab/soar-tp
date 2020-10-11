@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>SOAR Shop</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputText value="Drinks" style="font-size: 30px"/>
+            <br/>
+            <ui:repeat value="#{userControllerBean.findSellerByShopName().drinks}" var="item">
+                <h:outputText value="-----" />
+                <h:panelGrid columns="2">
+                    <h:outputText value="Name:" />
+                    <h:outputText value="#{item.name}" />
+                    <h:outputText value="Price:" />
+                    <h:outputText value="#{item.price}" />
+                    <h:outputText value="Contains Alcohol:" />
+                    <h:outputText value="#{item.hasAlcohol}" />
+                </h:panelGrid>
+                <h:outputText value="-----" />
+            </ui:repeat>
+            <br/>
+            <h:outputText value="Foods" style="font-size: 30px"/>
+            <br/>
+            <ui:repeat value="#{userControllerBean.findSellerByShopName().foods}" var="item">
+                <h:outputText value="-----" />
+                <h:panelGrid columns="2">
+                    <h:outputText value="Name:" />
+                    <h:outputText value="#{item.name}" />
+                    <h:outputText value="Price:" />
+                    <h:outputText value="#{item.price}" />
+                    <h:outputText value="Contains Meat:" />
+                    <h:outputText value="#{item.hasMeat}" />
+                    <h:outputText value="Ingredients:" />
+                    <h:outputText value="#{item.ingredients}" />
+                </h:panelGrid>
+                <h:outputText value="-----" />
+            </ui:repeat>
+            <br/>
+            <h:commandButton value="Go Back to Main Menu" action="/MainPage/MainPage.xhtml?faces-redirect=true"/>
+        </h:form>
+    </h:body>
+</html>
+
