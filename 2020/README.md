@@ -5,7 +5,7 @@
 | Version 1 / Week 3 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w3) | [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
 | Version 1 / Week 4 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w4) | [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
 | Version 2 / Week 5 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w5) | [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v2) |
-
+| Version 2 / Week 6 | [Code]() | [Solution]() |
 
 ---
 
