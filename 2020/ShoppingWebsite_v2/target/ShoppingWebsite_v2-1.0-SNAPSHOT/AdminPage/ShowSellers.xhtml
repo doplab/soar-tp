@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>SOAR Shop</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Sellers" style="font-size: 30px"/>
+                <br/>
+                <ui:repeat value="#{modelManager.retreiveSellers()}" var="item">
+                    <h:outputText value="-----" />
+                    <h:panelGrid columns="2">
+                        <h:outputText value="Shop Name(username):" />
+                        <h:outputText value="#{item.username}" />
+                        <h:outputText value="First Name:" />
+                        <h:outputText value="#{item.firstName}" />
+                        <h:outputText value="Last Name:" />
+                        <h:outputText value="#{item.lastName}" />
+                        <h:outputText value="Email:" />
+                        <h:outputText value="#{item.email}" />
+                        <h:outputText value="Verified:" />
+                        <h:outputText value="#{item.verified}" />
+                        <h:outputText value="Drinks:" />
+                        <h:outputText value="#{item.drinks}" />
+                        <h:outputText value="Foods:" />
+                        <h:outputText value="#{item.foods}" />
+                    </h:panelGrid>
+                    <h:outputText value="-----" />
+                </ui:repeat>
+                <br/>
+                <h:commandButton value="Go Back to Main Menu" action="/AdminPage/AdminMainPage.xhtml?faces-redirect=true"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+

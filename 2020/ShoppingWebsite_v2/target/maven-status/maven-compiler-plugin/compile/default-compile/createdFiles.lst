@@ -1,0 +1,17 @@
+ch/unil/doplab/shoppingwebsite_v2/UserList.class
+ch/unil/doplab/shoppingwebsite_v2/models/managers/ModelManagerBean.class
+ch/unil/doplab/shoppingwebsite_v2/models/FoodBean.class
+ch/unil/doplab/shoppingwebsite_v2/exceptions/DoesNotExistException.class
+ch/unil/doplab/shoppingwebsite_v2/models/SellerBean.class
+ch/unil/doplab/shoppingwebsite_v2/models/ShoppingCartBean.class
+ch/unil/doplab/shoppingwebsite_v2/models/BuyerBean.class
+ch/unil/doplab/shoppingwebsite_v2/models/DrinkBean.class
+ch/unil/doplab/shoppingwebsite_v2/Drinkable.class
+ch/unil/doplab/shoppingwebsite_v2/exceptions/AlreadyExistsException.class
+ch/unil/doplab/shoppingwebsite_v2/resources/JAXRSConfiguration.class
+ch/unil/doplab/shoppingwebsite_v2/models/AdminBean.class
+ch/unil/doplab/shoppingwebsite_v2/exceptions/InsufficientBalanceException.class
+ch/unil/doplab/shoppingwebsite_v2/resources/JavaEE8Resource.class
+ch/unil/doplab/shoppingwebsite_v2/exceptions/UnauthorizedActionException.class
+ch/unil/doplab/shoppingwebsite_v2/Edible.class
+ch/unil/doplab/shoppingwebsite_v2/User.class
