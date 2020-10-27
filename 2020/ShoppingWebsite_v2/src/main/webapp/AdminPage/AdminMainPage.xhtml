@@ -8,7 +8,7 @@
     <h:body>
         <h:form>
             <h:panelGrid columns="1">
-                <h:commandButton value="Log out" action="#{modelManager.userLogsout}"/>
+                <h:commandButton value="Log out" action="#{modelManager.userLogsout()}"/>
                 <h:link value="Create an Admin" outcome="CreateAdmin.xhtml?faces-redirect=true" />
                 <h:link value="Remove an Admin" outcome="RemoveAdmin.xhtml?faces-redirect=true" />
                 <h:link value="Remove a Buyer" outcome="RemoveBuyer.xhtml?faces-redirect=true" />

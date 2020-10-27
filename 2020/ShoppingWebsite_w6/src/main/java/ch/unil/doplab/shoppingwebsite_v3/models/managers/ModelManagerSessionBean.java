@@ -24,16 +24,9 @@ import javax.ejb.Stateful;
 @Stateful
 public class ModelManagerSessionBean implements ModelManagerSessionBeanRemote {
 
-    private User currentUser;
-
-    private AdminBean adminBean = new AdminBean();
-    private BuyerBean buyerBean = new BuyerBean();
-    private SellerBean sellerBean = new SellerBean();
-
-    private FoodBean foodBean = new FoodBean();
-    private DrinkBean drinkBean = new DrinkBean();
-
     private static UserList userList = UserList.getInstance();
+
+    private User currentUser;
 
     @Override
     public String userLogsIn(String username, String password) {
@@ -53,15 +46,14 @@ public class ModelManagerSessionBean implements ModelManagerSessionBeanRemote {
         }
         return "/MainPage/LoginPage.xhtml?faces-redirect=true";
     }
-    
+
     @Override
     public String userLogsout() {
         currentUser = null;
         return "/MainPage/MainPage.xhtml?faces-redirect=true";
     }
-    
-    // private methods
 
+    // private methods
     private User findByUsername(String username) throws DoesNotExistException {
         for (User user : userList.getUsers()) {
             if (user.getUsername().equals(username)) {
@@ -193,4 +185,5 @@ public class ModelManagerSessionBean implements ModelManagerSessionBeanRemote {
         }
         throw new UnauthorizedActionException("You are not authorized to perform the operation.");
     }
+
 }

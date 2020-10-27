@@ -1,10 +1,10 @@
 package ch.unil.doplab.shoppingwebsite_v2;
 
-import ch.unil.doplab.shoppingwebsite_v2.models.AdminBean;
-import ch.unil.doplab.shoppingwebsite_v2.models.BuyerBean;
-import ch.unil.doplab.shoppingwebsite_v2.models.DrinkBean;
-import ch.unil.doplab.shoppingwebsite_v2.models.FoodBean;
-import ch.unil.doplab.shoppingwebsite_v2.models.SellerBean;
+import ch.unil.doplab.shoppingwebsite_v2.models.Admin;
+import ch.unil.doplab.shoppingwebsite_v2.models.Buyer;
+import ch.unil.doplab.shoppingwebsite_v2.models.Drink;
+import ch.unil.doplab.shoppingwebsite_v2.models.Food;
+import ch.unil.doplab.shoppingwebsite_v2.models.Seller;
 import java.util.ArrayList;
 
 /**
@@ -15,9 +15,9 @@ import java.util.ArrayList;
 public class UserList {
 
     private ArrayList<User> users;
-    private ArrayList<AdminBean> admins;
-    private ArrayList<BuyerBean> buyers;
-    private ArrayList<SellerBean> sellers;
+    private ArrayList<Admin> admins;
+    private ArrayList<Buyer> buyers;
+    private ArrayList<Seller> sellers;
 
     private static UserList singletonInstance = null;
 
@@ -38,7 +38,7 @@ public class UserList {
 
     private void addTheFirstUsers() {
         // admin
-        AdminBean admin = new AdminBean();
+        Admin admin = new Admin();
         admin.setUsername("lisa");
         admin.setFirstName("lisa");
         admin.setLastName("simpson");
@@ -47,7 +47,7 @@ public class UserList {
         users.add(admin);
         admins.add(admin);
         // buyer
-        BuyerBean buyer = new BuyerBean();
+        Buyer buyer = new Buyer();
         buyer.setUsername("marge");
         buyer.setFirstName("marge");
         buyer.setLastName("simpson");
@@ -56,7 +56,7 @@ public class UserList {
         users.add(buyer);
         buyers.add(buyer);
         // seller
-        SellerBean seller = new SellerBean();
+        Seller seller = new Seller();
         seller.setUsername("Barty's");
         seller.setFirstName("bart");
         seller.setLastName("simpson");
@@ -66,7 +66,7 @@ public class UserList {
         sellers.add(seller);
         // add foods and drinks to the seller's shop
         // food - pasta
-        FoodBean pasta = new FoodBean();
+        Food pasta = new Food();
         pasta.setName("Pasta");
         pasta.setPrice(15.0);
         pasta.setHasMeat(false);
@@ -75,7 +75,7 @@ public class UserList {
         pasta.getIngredients().add("parmigiano");
         seller.getFoods().add(pasta);
         // food - pizza
-        FoodBean pizza = new FoodBean();
+        Food pizza = new Food();
         pizza.setName("Pizza");
         pizza.setPrice(12.0);
         pizza.setHasMeat(false);
@@ -84,7 +84,7 @@ public class UserList {
         pizza.getIngredients().add("mozarella");
         seller.getFoods().add(pizza);
         // food - chickenCurry
-        FoodBean chickenCurry = new FoodBean();
+        Food chickenCurry = new Food();
         chickenCurry.setName("Chicken Curry");
         chickenCurry.setPrice(18.0);
         chickenCurry.setHasMeat(true);
@@ -92,36 +92,36 @@ public class UserList {
         chickenCurry.getIngredients().add("curry sauce");
         seller.getFoods().add(chickenCurry);
         // drink - water
-        DrinkBean water = new DrinkBean();
+        Drink water = new Drink();
         water.setName("Water");
         water.setPrice(1.0);
         water.setHasAcohol(false);
         seller.getDrinks().add(water);
         // drink - ice tea
-        DrinkBean iceTea = new DrinkBean();
+        Drink iceTea = new Drink();
         iceTea.setName("Ice Tea");
         iceTea.setPrice(2.0);
         iceTea.setHasAcohol(false);
         seller.getDrinks().add(iceTea);
         // drink = vodka
-        DrinkBean vodka = new DrinkBean();
+        Drink vodka = new Drink();
         vodka.setName("Vodka");
         vodka.setPrice(5.0);
         vodka.setHasAcohol(true);
         seller.getDrinks().add(vodka);
     }
 
-    public void addAnAdmin(AdminBean admin) {
+    public void addAnAdmin(Admin admin) {
         users.add(admin);
         admins.add(admin);
     }
 
-    public void addABuyer(BuyerBean buyer) {
+    public void addABuyer(Buyer buyer) {
         users.add(buyer);
         buyers.add(buyer);
     }
 
-    public void addASeller(SellerBean seller) {
+    public void addASeller(Seller seller) {
         users.add(seller);
         sellers.add(seller);
     }
@@ -141,15 +141,15 @@ public class UserList {
         buyers.remove(user);
     }
 
-    public ArrayList<AdminBean> getAdmins() {
+    public ArrayList<Admin> getAdmins() {
         return admins;
     }
 
-    public ArrayList<BuyerBean> getBuyers() {
+    public ArrayList<Buyer> getBuyers() {
         return buyers;
     }
 
-    public ArrayList<SellerBean> getSellers() {
+    public ArrayList<Seller> getSellers() {
         return sellers;
     }
 

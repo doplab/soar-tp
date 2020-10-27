@@ -9,17 +9,17 @@
         <h:form>
             <h:panelGrid columns="2">
                 <h:outputText value="Username"/>
-                <h:inputText value="#{modelManager.sellerBean.username}" />
+                <h:inputText value="#{modelManager.username}" />
                 <h:outputText value="First Name"/>
-                <h:inputText value="#{modelManager.sellerBean.firstName}" />
+                <h:inputText value="#{modelManager.firstName}" />
                 <h:outputText value="Last Name"/>
-                <h:inputText value="#{modelManager.sellerBean.lastName}" />
+                <h:inputText value="#{modelManager.lastName}" />
                 <h:outputText value="Email"/>
-                <h:inputText value="#{modelManager.sellerBean.email}" />
+                <h:inputText value="#{modelManager.email}" />
                 <h:outputText value="Password"/>
-                <h:inputSecret value="#{modelManager.sellerBean.password}" />
+                <h:inputSecret value="#{modelManager.password}" />
                 <br/>
-                <h:commandButton value="Create a Seller" action="#{modelManager.createASeller}"/>
+                <h:commandButton value="Create a Seller" action="#{modelManager.createASeller()}"/>
                 <br/>
                 <h:commandButton value="Go Back to Main Menu" action="/MainPage/MainPage.xhtml?faces-redirect=true"/>
             </h:panelGrid>

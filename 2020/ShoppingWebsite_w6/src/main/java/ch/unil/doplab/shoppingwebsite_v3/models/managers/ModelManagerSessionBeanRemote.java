@@ -15,6 +15,8 @@ import javax.ejb.Remote;
 public interface ModelManagerSessionBeanRemote {
 
     String userLogsIn(String username, String password);
+
     String userLogsout();
+
     
 }
