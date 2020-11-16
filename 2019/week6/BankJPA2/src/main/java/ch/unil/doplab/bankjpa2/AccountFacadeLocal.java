@@ -6,7 +6,6 @@
 package ch.unil.doplab.bankjpa2;
 
 import ch.unil.doplab.bankjpa2.entities.Account;
-import java.util.List;
 import javax.ejb.Local;
 
 /**

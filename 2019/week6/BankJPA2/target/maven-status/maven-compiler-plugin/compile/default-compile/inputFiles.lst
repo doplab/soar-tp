@@ -1,6 +1,6 @@
-/Users/Admin/NetBeansProjects/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/AccountFacadeLocal.java
-/Users/Admin/NetBeansProjects/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/AccountFacade.java
-/Users/Admin/NetBeansProjects/BankJPA2/src/main/java/servlet/insert.java
-/Users/Admin/NetBeansProjects/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/entities/Account.java
-/Users/Admin/NetBeansProjects/BankJPA2/src/main/java/servlet/insertPayment.java
-/Users/Admin/NetBeansProjects/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/AbstractFacade.java
+/Users/admin/Desktop/SwitchDrive/GitHub/soar-tp/2019/week6/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/AbstractFacade.java
+/Users/admin/Desktop/SwitchDrive/GitHub/soar-tp/2019/week6/BankJPA2/src/main/java/servlet/insert.java
+/Users/admin/Desktop/SwitchDrive/GitHub/soar-tp/2019/week6/BankJPA2/src/main/java/servlet/insertPayment.java
+/Users/admin/Desktop/SwitchDrive/GitHub/soar-tp/2019/week6/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/AccountFacade.java
+/Users/admin/Desktop/SwitchDrive/GitHub/soar-tp/2019/week6/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/entities/Account.java
+/Users/admin/Desktop/SwitchDrive/GitHub/soar-tp/2019/week6/BankJPA2/src/main/java/ch/unil/doplab/bankjpa2/AccountFacadeLocal.java
