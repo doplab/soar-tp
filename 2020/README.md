@@ -8,8 +8,8 @@
 | Version 3 / Week 6 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w6) | [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v3) |
 | Database / Week 9 | [Queries + Solutions](https://github.com/doplab/soar-tp/blob/master/2020/ShoppingWebsite_w9/exercises.sql) ||
 | Version 4 / Week 10 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w10) | Solution |
-| Chat App / Week 11 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w11) | No Solution |
-| Version - / Week - | Code | Solution |
+| Web Socket Example / Week 11 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/Week_11) | No Solution |
+| JMS, TCP, and UDP Examples / Week 12 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/Week_12) | No Solution |
 | Version - / Week - | Code | Solution |
 
 ---
