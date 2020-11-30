@@ -20,13 +20,9 @@ public class JMSReceiver {
 
     public static void main(String[] args) {
         JMSContext jmsContext = connectionFactory.createContext();
-        
         JMSConsumer jmsConsumer = jmsContext.createConsumer(queue);
-        
         System.out.println("Receiving message from JMS");
-        
         String message = jmsConsumer.receiveBody(String.class);
-        
         System.out.println("Message received : " + message);
     }
 }

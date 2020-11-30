@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Ant-Version: Apache Ant 1.10.4
-Created-By: 10.0.2+13 ("Oracle Corporation")
+Created-By: 15.0.1+9-18 (Oracle Corporation)
 X-COMMENT: Main-Class will be added automatically by build
-Main-Class: ch.unil.doplab.jms.sender.JMSSender
+Main-Class: ch.unil.doplab.jms.sender.JMSReceiver
 

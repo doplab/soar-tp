@@ -14,21 +14,17 @@ public class JMSSender {
 
     @Resource(mappedName = "jms/MyJMSExerciseConnectionFactory")
     private static ConnectionFactory connectionFactory;
-    
+
     @Resource(mappedName = "jms/MyJMSExerciseQueue")
     private static Queue queue;
-    
+
     public static void main(String[] args) {
         JMSContext jmsContext = connectionFactory.createContext();
-        
         JMSProducer jmsProducer = jmsContext.createProducer();
-        
         String message = "Hello JMS!";
         System.out.println("Sending message to JMS");
-        
         jmsProducer.send(queue, message);
         System.out.println("Message sent!");
-        
     }
-    
+
 }
