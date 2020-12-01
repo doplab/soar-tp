@@ -1,0 +1,11 @@
+ch/unil/doplab/shoppingwebsite_v4/exceptions/DoesNotExistException.class
+ch/unil/doplab/shoppingwebsite_v4/resources/JavaEE8Resource.class
+ch/unil/doplab/shoppingwebsite_v4/models/Items.class
+ch/unil/doplab/shoppingwebsite_v4/models/managers/ModelManagerBean.class
+ch/unil/doplab/shoppingwebsite_v4/exceptions/InsufficientBalanceException.class
+ch/unil/doplab/shoppingwebsite_v4/models/Users.class
+ch/unil/doplab/shoppingwebsite_v4/resources/JAXRSConfiguration.class
+ch/unil/doplab/shoppingwebsite_v4/models/managers/ModelManagerSessionBean.class
+ch/unil/doplab/shoppingwebsite_v4/exceptions/AlreadyExistsException.class
+ch/unil/doplab/shoppingwebsite_v4/models/managers/ModelManagerSessionBeanRemote.class
+ch/unil/doplab/shoppingwebsite_v4/exceptions/UnauthorizedActionException.class

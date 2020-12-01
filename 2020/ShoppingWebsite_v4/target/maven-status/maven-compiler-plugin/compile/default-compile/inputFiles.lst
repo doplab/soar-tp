@@ -1,0 +1,11 @@
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/resources/JavaEE8Resource.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/models/managers/ModelManagerSessionBean.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/exceptions/InsufficientBalanceException.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/resources/JAXRSConfiguration.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/exceptions/AlreadyExistsException.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/models/Items.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/models/managers/ModelManagerSessionBeanRemote.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/exceptions/DoesNotExistException.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/models/managers/ModelManagerBean.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/models/Users.java
+/Users/admin/Desktop/SwitchDrive/GitHub/SOAR/2020/ShoppingWebsite_v4/src/main/java/ch/unil/doplab/shoppingwebsite_v4/exceptions/UnauthorizedActionException.java
