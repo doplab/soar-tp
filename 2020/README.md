@@ -2,15 +2,15 @@
 
 | Week # | Version # | Exercise |
 |---|---|---|
-| Week 3 | Version 1 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w3) [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
-| Week 4 | Version 1 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w4) [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
-| Week 5 | Version 2 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w5) [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v2) |
-| Week 6 | Version 3 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w6) [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v3) |
-| Week 9 | Database | [Queries + Solutions](https://github.com/doplab/soar-tp/blob/master/2020/ShoppingWebsite_w9/exercises.sql) ||
-| Week 10 | Version 4 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w10) [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v4) |
-| Week 11 | Web Socket | [Code](https://github.com/doplab/soar-tp/tree/master/2020/Week_11) No Solution |
-| Week 12 | JMS, TCP, and UDP | [Code](https://github.com/doplab/soar-tp/tree/master/2020/Week_12) No Solution |
-| Week 13 | Web Service | No Code [Solution](https://github.com/doplab/soar-tp/tree/master/2020/Week_13) |
+| Week 3 | Version 1 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w3) - [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
+| Week 4 | Version 1 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w4) - [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v1) |
+| Week 5 | Version 2 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w5) - [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v2) |
+| Week 6 | Version 3 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w6) - [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v3) |
+| Week 9 | Database | [Queries + Solutions](https://github.com/doplab/soar-tp/blob/master/2020/ShoppingWebsite_w9/exercises.sql) |
+| Week 10 | Version 4 | [Code](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_w10) - [Solution](https://github.com/doplab/soar-tp/tree/master/2020/ShoppingWebsite_v4) |
+| Week 11 | Web Socket | [Code](https://github.com/doplab/soar-tp/tree/master/2020/Week_11) - No Solution |
+| Week 12 | JMS, TCP, and UDP | [Code](https://github.com/doplab/soar-tp/tree/master/2020/Week_12) - No Solution |
+| Week 13 | Web Service | No Code - [Solution](https://github.com/doplab/soar-tp/tree/master/2020/Week_13) |
 | Week 14 | RESTful Web Service <br> Microservice| [Code for CRUD <br> Solution for RESTful](https://github.com/doplab/soar-tp/tree/master/2020/Week_14) |
 
 ---
