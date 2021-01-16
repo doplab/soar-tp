@@ -5,7 +5,6 @@
     <jta-data-source>jdbc/myDatasource</jta-data-source>
     <class>ch.unil.doplab.shoppingwebsite_v4.models.Users</class>
     <class>ch.unil.doplab.shoppingwebsite_v4.models.Items</class>
-    <class>ch.unil.doplab.shoppingwebsite_v4.models.NewEntity</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/db_soar"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
