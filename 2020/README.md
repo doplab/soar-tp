@@ -16,9 +16,10 @@
 ---
 
 You can **install the applications** on to your computer. Here is the list of applications and their versions:
-    * [JDK 8 (version 8u251)](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
-    * [Apache NetBeans (version 12.0)](https://netbeans.apache.org/download/index.html)
-    * Payara Server (5.201) - You should install it inside NetBeans. Instructions are below.
+
+* [JDK 8 (version 8u251)](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
+* [Apache NetBeans (version 12.0)](https://netbeans.apache.org/download/index.html)
+* Payara Server (5.201) - You should install it inside NetBeans. Instructions are below.
 
 ### How to install Payara Server inside the NetBeans?
 1. Go to "Services" tab on the Netbeans (If you do not see "Services" tab, click on Windows > Reset Windows)
